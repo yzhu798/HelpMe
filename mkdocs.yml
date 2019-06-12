@@ -1,0 +1,49 @@
+site_name: Help Me Mysql
+site_description: 自个儿的Mysql速查文档
+
+copyright: 'Copyright &copy; since 2019 Diwen Liu'
+
+docs_dir: notes
+
+repo_url: https://github.com/demon90s/Help_Me_Mysql
+edit_uri: "tree/master/notes"
+
+nav:
+  - About: index.md
+  - index:
+    - 01 install: 01_install.md
+    - 02 create user: 02_create_user.md
+    - 03 create db: 03_create_db.md
+    - 04 drop db: 04_drop_db.md
+    - 05 show db: 05_show_db.md
+    - 06 create table: 06_create_table.md
+    - 07 drop table: 07_drop_table.md
+    - 08 insert record: 08_insert_record.md
+    - 09 remove record: 09_remove_record.md
+    - 10 update record: 10_update_record.md
+    - 11 alter table: 11_alter_table.md
+    - 12 show column: 12_show_column.md
+    - 13 select: 13_select.md
+    - 14 backup db: 14_backup_db.md
+
+theme:
+  #name: 'material'
+  name: mkdocs
+  logo:
+    icon: 'school'
+  palette:
+    #primary: 'blue'
+    #accent: 'blue'
+  font:
+    #text: 'Open Sans'
+    #code: 'Open Sans Mono'
+  language: 'zh'
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.mark
+
+google_analytics:
+  - 'UA-XXXXXXXX-X'
+  - 'auto'
