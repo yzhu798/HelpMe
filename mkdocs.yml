@@ -1,5 +1,5 @@
-site_name: Help Me Mysql
-site_description: 自个儿的Mysql速查文档
+site_name: Help Me Please!!!
+site_description: 自个儿的速查文档
 
 copyright: 'Copyright &copy; since 2019 Diwen Liu'
 
@@ -10,21 +10,26 @@ edit_uri: "tree/master/notes"
 
 nav:
   - About: index.md
-  - index:
-    - 01 install: 01_install.md
-    - 02 create user: 02_create_user.md
-    - 03 create db: 03_create_db.md
-    - 04 drop db: 04_drop_db.md
-    - 05 show db: 05_show_db.md
-    - 06 create table: 06_create_table.md
-    - 07 drop table: 07_drop_table.md
-    - 08 insert record: 08_insert_record.md
-    - 09 remove record: 09_remove_record.md
-    - 10 update record: 10_update_record.md
-    - 11 alter table: 11_alter_table.md
-    - 12 show column: 12_show_column.md
-    - 13 select: 13_select.md
-    - 14 backup db: 14_backup_db.md
+  - C:
+    - 01 HelloWorld: C/01_HelloWorld.md
+    - 02 Makefile: C/02_Makefile.md
+    - 03 static library: C/03_static_library.md
+    - 04 shared library: C/04_shared_library.md
+  - Mysql:
+    - 01 install: Mysql/01_install.md
+    - 02 create user: Mysql/02_create_user.md
+    - 03 create db: Mysql/03_create_db.md
+    - 04 drop db: Mysql/04_drop_db.md
+    - 05 show db: Mysql/05_show_db.md
+    - 06 create table: Mysql/06_create_table.md
+    - 07 drop table: Mysql/07_drop_table.md
+    - 08 insert record: Mysql/08_insert_record.md
+    - 09 remove record: Mysql/09_remove_record.md
+    - 10 update record: Mysql/10_update_record.md
+    - 11 alter table: Mysql/11_alter_table.md
+    - 12 show column: Mysql/12_show_column.md
+    - 13 select: Mysql/13_select.md
+    - 14 backup db: Mysql/14_backup_db.md
 
 theme:
   #name: 'material'
