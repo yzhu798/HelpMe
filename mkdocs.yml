@@ -30,6 +30,7 @@ nav:
     - 12 show column: Mysql/12_show_column.md
     - 13 select: Mysql/13_select.md
     - 14 backup db: Mysql/14_backup_db.md
+    - 15 functions: Mysql/15_functions.md
 
 theme:
   #name: 'material'
