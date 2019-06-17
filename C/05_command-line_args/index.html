@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>03 static library - Help Me Please!!!</title>
+        <title>05_command-line_args - Help Me Please!!!</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -70,16 +70,16 @@
     <a href="../02_Makefile/">02 Makefile</a>
 </li>
                                     
-<li class="active">
-    <a href="./">03 static library</a>
+<li >
+    <a href="../03_static_library/">03 static library</a>
 </li>
                                     
 <li >
     <a href="../04_shared_library/">04 shared library</a>
 </li>
                                     
-<li >
-    <a href="../05_command-line_args/">05_command-line_args</a>
+<li class="active">
+    <a href="./">05_command-line_args</a>
 </li>
                                 </ul>
                             </li>
@@ -157,17 +157,17 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../02_Makefile/">
+                                <a rel="next" href="../04_shared_library/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../04_shared_library/">
+                                <a rel="prev" href="../../Mysql/01_install/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/demon90s/Help_Me_Mysql/tree/master/notes/C/03_static_library.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/demon90s/Help_Me_Mysql/tree/master/notes/C/05_command-line_args.md"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -177,40 +177,37 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#03-static-library">03 static library</a></li>
-            <li><a href="#link-static-library">Link static library</a></li>
+        <li class="main active"><a href="#command-line-arguments">command-line arguments</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="03-static-library">03 static library</h1>
-<p>创建文件 03_helloworld.c:</p>
-<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<h1 id="command-line-arguments">command-line arguments</h1>
+<p>获取命令行参数：</p>
+<div class="codehilite"><pre><span></span>$ ./05_cmd bar <span class="m">123</span> x
+</pre></div>
 
-<span class="kt">void</span> <span class="nf">helloworld</span><span class="p">()</span>
+
+<p>参数为：</p>
+<p>argc: 4</p>
+<p>argv: {"./05_cmd", "bar", "123", "x", NULL}</p>
+<p>编写程序实验：</p>
+<div class="codehilite"><pre><span></span><span class="c1">// 05_cmd.c</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;argc: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">argc</span><span class="p">);</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;argv: &quot;</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">argc</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s &quot;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
-
-
-<p>build static library:</p>
-<div class="codehilite"><pre><span></span>$ gcc -o 03_helloworld.o -c 03_helloworld.c
-$ ar crv libhelloworld.a 03_helloworld.o
-</pre></div>
-
-
-<p>查看符号表：</p>
-<div class="codehilite"><pre><span></span>$ nm libhelloworld.a <span class="p">|</span> grep helloworld
-<span class="m">0000000000000000</span> T helloworld
-</pre></div>
-
-
-<p>T表示符号位于代码区。</p>
-<h2 id="link-static-library">Link static library</h2>
-<p>假设有一个 main.c 文件，要使用库。</p>
-<div class="codehilite"><pre><span></span>$ gcc -o main.o -c main.c
-$ gcc -o main main.o libhelloworld.a
 </pre></div></div>
         </div>
 
