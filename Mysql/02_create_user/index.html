@@ -178,11 +178,13 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#02-create-user">02 create user</a></li>
+            <li><a href="#more">More</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="02-create-user">02 create user</h1>
+<p>刚安装完毕，需要用 root 登录，并创建一个新的账号。</p>
 <p>first login mysql client:</p>
 <div class="codehilite"><pre><span></span>$ su -
 <span class="c1"># mysql</span>
@@ -195,9 +197,42 @@
 </pre></div>
 
 
+<p>这条命令创建的是一个拥有所有权限的用户，可以从任何机器登录。</p>
 <p>退回普通用户，使用刚才创建的用户(diwen)登录mysql client:</p>
 <div class="codehilite"><pre><span></span>$ mysql -u diwen -p
-</pre></div></div>
+</pre></div>
+
+
+<h2 id="more">More</h2>
+<p>使用创建用户命令：</p>
+<div class="codehilite"><pre><span></span>&gt; CREATE USER wow;
+</pre></div>
+
+
+<p>创建了一个用户 wow, 他没有什么可用的权限，只能登录，也没有密码。</p>
+<p>查看这个用户的权限：</p>
+<div class="codehilite"><pre><span></span>&gt; SHOW GRANTS for wow;
+</pre></div>
+
+
+<p>查看当前所有的用户：</p>
+<div class="codehilite"><pre><span></span>&gt; SELECT USER, HOST FROM mysql.user;
+</pre></div>
+
+
+<p>删掉这个用户：</p>
+<div class="codehilite"><pre><span></span>&gt; DROP USER &#39;wow&#39;@&#39;%&#39;;
+</pre></div>
+
+
+<h3 id="_1">修改用户的权限</h3>
+<div class="codehilite"><pre><span></span>$ su - 
+<span class="c1"># mysql</span>
+&gt; GRANT ALL ON foo.* TO wow@<span class="s1">&#39;localhost&#39;</span> IDENTIFIED BY <span class="s1">&#39;123456&#39;</span><span class="p">;</span>
+</pre></div>
+
+
+<p>这其实会创建一个用户，假如没有 wow@localhost 的话。</p></div>
         </div>
 
         <footer class="col-md-12">
