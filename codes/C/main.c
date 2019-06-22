@@ -2,6 +2,6 @@ void helloworld();
 
 int main()
 {
-    helloworld();
-    return 0;
+	helloworld();
+	return 0;
 }

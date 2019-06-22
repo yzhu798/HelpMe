@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -g -Wall -std=c99
 
-TARGETS = 01_helloworld 05_cmd
+TARGETS = 01_helloworld 06_cmd
 
 all: $(TARGETS) libhelloworld.a libhelloworld.so
 
