@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>04 shared library - Help Me Please!!!</title>
+        <title>05 format code - Help Me Please!!!</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -74,12 +74,12 @@
     <a href="../03_static_library/">03 static library</a>
 </li>
                                     
-<li class="active">
-    <a href="./">04 shared library</a>
+<li >
+    <a href="../04_shared_library/">04 shared library</a>
 </li>
                                     
-<li >
-    <a href="../05_format_code/">05 format code</a>
+<li class="active">
+    <a href="./">05 format code</a>
 </li>
                                     
 <li >
@@ -169,17 +169,17 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../03_static_library/">
+                                <a rel="next" href="../04_shared_library/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../05_format_code/">
+                                <a rel="prev" href="../06_command-line_args/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/demon90s/Help_Me_Mysql/tree/master/notes/C/04_shared_library.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/demon90s/Help_Me_Mysql/tree/master/notes/C/05_format_code.md"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -189,43 +189,21 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#04-shared-library">04 shared library</a></li>
-            <li><a href="#link-shared-library">Link shared library</a></li>
+        <li class="main active"><a href="#format-code">format code</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="04-shared-library">04 shared library</h1>
-<p>创建文件 04_helloworld.c:</p>
-<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<h1 id="format-code">format code</h1>
+<p>use astyle:</p>
+<div class="codehilite"><pre><span></span>astyle --style<span class="o">=</span>stroustrup --indent<span class="o">=</span>tab --align-pointer<span class="o">=</span><span class="nb">type</span> --recursive ./*.c,*.h
 
-<span class="kt">void</span> <span class="nf">helloworld</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World from shared libary</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="p">}</span>
+find . -name <span class="s2">&quot;*.orig&quot;</span> <span class="p">|</span> xargs rm -f
 </pre></div>
 
 
-<p>build shared library:</p>
-<div class="codehilite"><pre><span></span>$ gcc -shared -o libhelloworld.so -fPIC 04_helloworld.c
-</pre></div>
-
-
-<h2 id="link-shared-library">Link shared library</h2>
-<p>假设有一个 main.c 文件，要使用库。</p>
-<div class="codehilite"><pre><span></span>$ gcc -o main.o -c main.c
-$ gcc -o main main.o -L. -lhelloworld
-</pre></div>
-
-
-<p>把库所在目录添加到 /etc/ld.so.conf 文件，然后执行：</p>
-<div class="codehilite"><pre><span></span>$ sudo ldconfig
-</pre></div>
-
-
-<p>可以把当前目录<code>.</code>加入到 /etc/ld.so.conf 。</p>
-<p>查看程序依赖的共享库：</p>
-<div class="codehilite"><pre><span></span>$ ldd main
+<p>How to install: </p>
+<div class="codehilite"><pre><span></span>$ sudo apt install astyle
 </pre></div></div>
         </div>
 

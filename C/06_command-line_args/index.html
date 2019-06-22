@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>05_command-line_args - Help Me Please!!!</title>
+        <title>06_command-line_args - Help Me Please!!!</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -78,8 +78,12 @@
     <a href="../04_shared_library/">04 shared library</a>
 </li>
                                     
+<li >
+    <a href="../05_format_code/">05 format code</a>
+</li>
+                                    
 <li class="active">
-    <a href="./">05_command-line_args</a>
+    <a href="./">06_command-line_args</a>
 </li>
                                 </ul>
                             </li>
@@ -165,7 +169,7 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../04_shared_library/">
+                                <a rel="next" href="../05_format_code/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -175,7 +179,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/demon90s/Help_Me_Mysql/tree/master/notes/C/05_command-line_args.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/demon90s/Help_Me_Mysql/tree/master/notes/C/06_command-line_args.md"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -185,23 +189,22 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#05-command-line-arguments">05 command-line arguments</a></li>
+        <li class="main active"><a href="#06-command-line-arguments">06 command-line arguments</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="05-command-line-arguments">05 command-line arguments</h1>
+<h1 id="06-command-line-arguments">06 command-line arguments</h1>
 <p>获取命令行参数：</p>
-<div class="codehilite"><pre><span></span>$ ./05_cmd bar <span class="m">123</span> x
+<div class="codehilite"><pre><span></span>$ ./06_cmd bar <span class="m">123</span> x
 </pre></div>
 
 
 <p>参数为：</p>
 <p>argc: 4</p>
-<p>argv: {"./05_cmd", "bar", "123", "x", NULL}</p>
+<p>argv: {"./06_cmd", "bar", "123", "x", NULL}</p>
 <p>编写程序实验：</p>
-<div class="codehilite"><pre><span></span><span class="c1">// 05_cmd.c</span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
