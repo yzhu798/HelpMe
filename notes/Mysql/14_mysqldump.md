@@ -1,4 +1,4 @@
-# 14 backup db
+# 14 mysqldump
 
 备份数据库foo的所有表，包含数据:
 

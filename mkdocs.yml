@@ -30,8 +30,10 @@ nav:
     - 11 alter table: Mysql/11_alter_table.md
     - 12 show column: Mysql/12_show_column.md
     - 13 select: Mysql/13_select.md
-    - 14 backup db: Mysql/14_backup_db.md
+    - 14 mysqldump: Mysql/14_mysqldump.md
     - 15 functions: Mysql/15_functions.md
+    - 16 execute_sql_in_shell: Mysql/16_execute_sql_in_shell.md
+    - 17 privileges: Mysql/17_privileges.md
 
 theme:
   #name: 'material'

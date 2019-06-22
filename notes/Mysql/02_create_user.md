@@ -32,7 +32,13 @@ $ mysql -u diwen -p
 > CREATE USER wow;
 ```
 
-创建了一个用户 wow, 他没有什么可用的权限，只能登录，也没有密码。
+创建了一个用户`wow@%`, 他没有什么可用的权限，只能登录，也没有密码。
+
+创建用户的同时指定密码：
+
+```
+> CREATE USER wow@'localhost' IDENTIFIED BY '123456';
+```
 
 查看这个用户的权限：
 
