@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>14 backup db - Help Me Please!!!</title>
+        <title>14 mysqldump - Help Me Please!!!</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -140,11 +140,19 @@
 </li>
                                     
 <li class="active">
-    <a href="./">14 backup db</a>
+    <a href="./">14 mysqldump</a>
 </li>
                                     
 <li >
     <a href="../15_functions/">15 functions</a>
+</li>
+                                    
+<li >
+    <a href="../16_execute_sql_in_shell/">16 execute_sql_in_shell</a>
+</li>
+                                    
+<li >
+    <a href="../17_privileges/">17 privileges</a>
 </li>
                                 </ul>
                             </li>
@@ -167,7 +175,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/demon90s/Help_Me_Mysql/tree/master/notes/Mysql/14_backup_db.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/demon90s/Help_Me_Mysql/tree/master/notes/Mysql/14_mysqldump.md"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -177,12 +185,12 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#14-backup-db">14 backup db</a></li>
+        <li class="main active"><a href="#14-mysqldump">14 mysqldump</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="14-backup-db">14 backup db</h1>
+<h1 id="14-mysqldump">14 mysqldump</h1>
 <p>备份数据库foo的所有表，包含数据:</p>
 <div class="codehilite"><pre><span></span>$ mysqldump -u diwen -p foo &gt; foo_bak.sql
 </pre></div>
