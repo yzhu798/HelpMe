@@ -187,19 +187,20 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#02-makefile">02 Makefile</a></li>
             <li><a href="#how">How?</a></li>
+            <li><a href="#more">More</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="02-makefile">02 Makefile</h1>
 <p>Makefile for build 01_helloworld.c:</p>
-<div class="codehilite"><pre><span></span># 02_Makefile
-CC = gcc
-CFLAGS = -g -Wall -std=c99
+<div class="codehilite"><pre><span></span><span class="c"># 02_Makefile</span>
+<span class="nv">CC</span> <span class="o">=</span> gcc
+<span class="nv">CFLAGS</span> <span class="o">=</span> -g -Wall -std<span class="o">=</span>c99
 
-all: 01_helloworld
+<span class="nf">all</span><span class="o">:</span> 01<span class="n">_helloworld</span>
 
-clean:
+<span class="nf">clean</span><span class="o">:</span>
     -rm -f 01_helloworld
 </pre></div>
 
@@ -212,11 +213,15 @@ clean:
 <h2 id="how">How?</h2>
 <p>采用内置规则自动build。</p>
 <p>此内置规则为：</p>
-<div class="codehilite"><pre><span></span><span class="c">%: %.cpp</span>
+<div class="codehilite"><pre><span></span><span class="nf">%</span><span class="o">:</span> %.<span class="n">c</span>
 </pre></div>
 
 
-<p>可自行修改，以适应需求。</p></div>
+<p>可自行修改，以适应需求。</p>
+<h2 id="more">More</h2>
+<p>有时候需要获取shell的输出，方便写makefile:</p>
+<div class="codehilite"><pre><span></span><span class="nv">MYSQL_INCLUDE</span> <span class="o">=</span> <span class="k">$(</span>shell mysql_config --cflags<span class="k">)</span> <span class="c1"># 把 mysql_config --cflags 的输出内容赋给 MYSQL_INCLUDE</span>
+</pre></div></div>
         </div>
 
         <footer class="col-md-12">
