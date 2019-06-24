@@ -85,6 +85,10 @@
 <li >
     <a href="../06_command-line_args/">06_command-line_args</a>
 </li>
+                                    
+<li >
+    <a href="../07_debug_by_gdb/">07 debug by gdb</a>
+</li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -190,6 +194,7 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#format-code">format code</a></li>
+        <li class="main "><a href="#format-failed-reason">format failed reason</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -204,6 +209,22 @@ find . -name <span class="s2">&quot;*.orig&quot;</span> <span class="p">|</span>
 
 <p>How to install: </p>
 <div class="codehilite"><pre><span></span>$ sudo apt install astyle
+</pre></div>
+
+
+<h1 id="format-failed-reason">format failed reason</h1>
+<p>最好把文件弄成unix下的utf-8格式。windows下面的文件换行符会影响到格式化。</p>
+<p>使用下面的脚本把这个换行符干掉：</p>
+<div class="codehilite"><pre><span></span><span class="ch">#! /bin/bash</span>
+
+<span class="c1"># cut the last ^M of the line</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+        <span class="nb">echo</span> <span class="s2">&quot;no input file&quot;</span>
+        <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">fi</span>
+
+tr -d <span class="s2">&quot;\015&quot;</span> &lt; <span class="nv">$1</span> &gt; <span class="nv">$1</span>.bak
+mv <span class="nv">$1</span>.bak <span class="nv">$1</span>
 </pre></div></div>
         </div>
 
