@@ -28,14 +28,19 @@ $ gdb prog core
 
 ```gdb
 > set args [arg_list]   # 设置程序的启动参数
+> set print pretty on   # 友好的输出格式
+
+> p variable            # 查看变量内容
+> ptype variable        # 查看变量的定义
+
 > bt                    # 查看调用堆栈
 > f n                   # 跳到第n个stack frame
-> p variable            # 查看变量内容
 > n                     # step over
 > s                     # step in
 > finish                # 直接执行完当前的函数（仍保持断点调试状态）
 > b file:line           # 在文件的某一行设置断点
 > delete break          # 删除所有的断点
+
 > q                     # 退出调试
 > c                     # 继续执行程序
 > run                   # 开始执行程序
