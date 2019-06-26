@@ -83,7 +83,7 @@
 </li>
                                     
 <li >
-    <a href="../06_command-line_args/">06_command-line_args</a>
+    <a href="../06_command-line_args/">06 command-line_args</a>
 </li>
                                     
 <li class="active">
@@ -222,14 +222,19 @@
 <p>直接gdb附加进程后，使用bt命令查看调用堆栈即可。</p>
 <h2 id="_1">常用调试命令</h2>
 <div class="codehilite"><pre><span></span>&gt; set args [arg_list]   # 设置程序的启动参数
+&gt; set print pretty on   # 友好的输出格式
+
+&gt; p variable            # 查看变量内容
+&gt; ptype variable        # 查看变量的定义
+
 &gt; bt                    # 查看调用堆栈
 &gt; f n                   # 跳到第n个stack frame
-&gt; p variable            # 查看变量内容
 &gt; n                     # step over
 &gt; s                     # step in
 &gt; finish                # 直接执行完当前的函数（仍保持断点调试状态）
 &gt; b file:line           # 在文件的某一行设置断点
 &gt; delete break          # 删除所有的断点
+
 &gt; q                     # 退出调试
 &gt; c                     # 继续执行程序
 &gt; run                   # 开始执行程序
