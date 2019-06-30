@@ -18,6 +18,13 @@ nav:
     - 05 format code: C/05_format_code.md
     - 06 command-line_args: C/06_command-line_args.md
     - 07 debug by gdb: C/07_debug_by_gdb.md
+  - vim:
+    - settings: vim/settings.md
+    - file edit: vim/file_edit.md
+    - file navigation: vim/file_navigation.md
+    - shell command: vim/shell_command.md
+    - window: vim/window.md
+    - file buffer: vim/file_buffer.md
   - Mysql:
     - 01 install: Mysql/01_install.md
     - 02 create user: Mysql/02_create_user.md
