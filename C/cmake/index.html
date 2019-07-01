@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>cmake - Help Me Please!!!</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "cmake";
+    var mkdocs_page_input_path = "C/cmake.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Help Me Please!!!</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">About</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">C</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../HelloWorld/">HelloWorld</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Makefile/">Makefile</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../static_library/">static library</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../shared_library/">shared library</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../format_code/">format code</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../command-line_args/">command-line_args</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../debug_by_gdb/">debug by gdb</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">cmake</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#cmake">cmake</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#_1">安装</a></li>
+        
+            <li><a class="toctree-l4" href="#start-with-hello-world">Start with Hello World</a></li>
+        
+            <li><a class="toctree-l4" href="#_2">切换工程</a></li>
+        
+            <li><a class="toctree-l4" href="#_3">构建库</a></li>
+        
+            <li><a class="toctree-l4" href="#_4">设置变量</a></li>
+        
+            <li><a class="toctree-l4" href="#_5">修改编译器</a></li>
+        
+            <li><a class="toctree-l4" href="#_6">修改编译选项</a></li>
+        
+            <li><a class="toctree-l4" href="#_7">判断平台</a></li>
+        
+            <li><a class="toctree-l4" href="#_8">完整例子</a></li>
+        
+            <li><a class="toctree-l4" href="#_11">命令速查</a></li>
+        
+            <li><a class="toctree-l4" href="#_12">变量速查</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">vim</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../vim/settings/">settings</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../vim/file_edit/">file edit</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../vim/file_navigation/">file navigation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../vim/shell_command/">shell command</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../vim/window/">window</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../vim/file_buffer/">file buffer</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Mysql</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Mysql/01_install/">01 install</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Mysql/02_create_user/">02 create user</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Mysql/03_create_db/">03 create db</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Mysql/04_drop_db/">04 drop db</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Mysql/05_show_db/">05 show db</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Mysql/06_create_table/">06 create table</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Mysql/07_drop_table/">07 drop table</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Mysql/08_insert_record/">08 insert record</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Mysql/09_remove_record/">09 remove record</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Mysql/10_update_record/">10 update record</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Mysql/11_alter_table/">11 alter table</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Mysql/12_show_column/">12 show column</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Mysql/13_select/">13 select</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Mysql/14_mysqldump/">14 mysqldump</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Mysql/15_functions/">15 functions</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Mysql/16_execute_sql_in_shell/">16 execute_sql_in_shell</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Mysql/17_privileges/">17 privileges</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Help Me Please!!!</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>C &raquo;</li>
+        
+      
+    
+    <li>cmake</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/demon90s/Help_Me_Mysql/tree/master/notes/C/cmake.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="cmake">cmake</h1>
+<p>cmake 可以用来生成项目工程文件，比如 Linux 下的 Makefile 等文件，VS下的 sln 等文件。cmake使用一个名为 CMakeLists.txt 的文件来描述项目构建过程。</p>
+<p>使用 cmake 构建一个项目的流程如下：</p>
+<ol>
+<li>
+<p>编写 CMakeLists.txt 文件</p>
+</li>
+<li>
+<p>使用 cmake 命令生成工程文件</p>
+</li>
+<li>
+<p>构建项目，比如 Linux 下可使用 make 命令，或直接使用 cmake 命令构建</p>
+</li>
+</ol>
+<h2 id="_1">安装</h2>
+<p>CentOS 7安装命令：</p>
+<div class="codehilite"><pre><span></span>$ sudo yum install cmake
+</pre></div>
+
+
+<p>Ubuntu18.04 安装命令：</p>
+<div class="codehilite"><pre><span></span>$ sudo apt-get install cmake
+</pre></div>
+
+
+<p>Windows下直接下载安装包即可：https://cmake.org/download/</p>
+<h2 id="start-with-hello-world">Start with Hello World</h2>
+<div class="codehilite"><pre><span></span><span class="c"># 如果 cmake 版本低于设定版本，则出错</span>
+<span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span> <span class="s">3.5</span> <span class="s">FATAL_ERROR</span><span class="p">)</span>
+
+<span class="c"># 设定项目名字为 hello ，项目语言为 C</span>
+<span class="nb">project</span><span class="p">(</span><span class="s">hello</span> <span class="s">LANGUAGES</span> <span class="s">C</span><span class="p">)</span>
+
+<span class="c"># 令 cmake 创建一个可执行程序 hello-world ，它由 hello-world.c 编译链接而来</span>
+<span class="nb">add_executable</span><span class="p">(</span><span class="s">hello-world</span> <span class="s">hello-world.c</span><span class="p">)</span>
+</pre></div>
+
+
+<p>C++语言在cmake中写成 CXX 。</p>
+<p>执行下面的命令生成项目工程：</p>
+<div class="codehilite"><pre><span></span>$ mkdir -p build
+$ <span class="nb">cd</span> build
+$ cmake ..
+</pre></div>
+
+
+<p>项目工程生成在 build 目录下。</p>
+<p>执行下面的命令构建：</p>
+<div class="codehilite"><pre><span></span>$ cmake --build .
+</pre></div>
+
+
+<p>开启多线程编译：</p>
+<div class="codehilite"><pre><span></span>$ cmake --build . -- -j <span class="m">8</span>
+</pre></div>
+
+
+<p>清理项目：</p>
+<div class="codehilite"><pre><span></span>$ cmake --build . --target clean
+</pre></div>
+
+
+<p>若直接把 build 目录删掉，就完全清理掉工程了。</p>
+<h2 id="_2">切换工程</h2>
+<p>查看当前平台可用的 generators ：</p>
+<div class="codehilite"><pre><span></span>$ cmake --help
+</pre></div>
+
+
+<p>生成 Ninja 的工程：</p>
+<div class="codehilite"><pre><span></span>$ mkdir -p build
+$ <span class="nb">cd</span> build
+$ cmake -G Ninja ..
+</pre></div>
+
+
+<h2 id="_3">构建库</h2>
+<div class="codehilite"><pre><span></span><span class="c"># 添加一个静态库 message ，它由 Message.h, Message.c 编译链接而来</span>
+<span class="nb">add_library</span><span class="p">(</span><span class="s">message</span>
+    <span class="s">STATIC</span>
+    <span class="s">Message.h</span>
+    <span class="s">Message.c</span><span class="p">)</span>
+</pre></div>
+
+
+<p>把 STATIC 修改成 SHARED 即可修改成共享库。</p>
+<p>如果可执行程序需要对此库进行链接，那么在 add_executable 后面加上 target_link_libraries 即可。如：</p>
+<div class="codehilite"><pre><span></span><span class="c"># 令 cmake 创建一个可执行程序 hello-world ，它由 hello-world.c 编译链接而来</span>
+<span class="nb">add_executable</span><span class="p">(</span><span class="s">hello-world</span> <span class="s">hello-world.c</span><span class="p">)</span>
+
+<span class="c"># hello-world 还需要链接 message 库</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">hello-world</span> <span class="s">message</span><span class="p">)</span>
+</pre></div>
+
+
+<h2 id="_4">设置变量</h2>
+<p>使用 set 命令设置变量。变量有内置的，也有自定义的。</p>
+<div class="codehilite"><pre><span></span><span class="nb">set</span><span class="p">(</span><span class="s">SRC</span> <span class="s">hello.c</span><span class="p">)</span>
+</pre></div>
+
+
+<p>引用变量：</p>
+<div class="codehilite"><pre><span></span><span class="nb">add_executable</span><span class="p">(</span><span class="s">hello</span> <span class="o">${</span><span class="nv">src</span><span class="o">}</span><span class="p">)</span>
+</pre></div>
+
+
+<p>如果变量不存在，展开后的就是一个空内容。</p>
+<p>可以在运行 cmake 的时候，用-D设置变量：</p>
+<div class="codehilite"><pre><span></span>$ cmake .. -DCMAKE_BUILD_TYPE<span class="o">=</span>debug
+</pre></div>
+
+
+<p>变量可以拿来做判断：</p>
+<div class="codehilite"><pre><span></span><span class="nb">set</span><span class="p">(</span><span class="s">USE_LIBRARY</span> <span class="s">OFF</span><span class="p">)</span>
+<span class="nb">if</span> <span class="p">(</span><span class="s">USE_LIBRARY</span><span class="p">)</span>
+    <span class="nb">add_library</span><span class="p">(</span><span class="s">message</span> <span class="s">message.c</span> <span class="s">message.h</span><span class="p">)</span>
+    <span class="nb">add_executable</span><span class="p">(</span><span class="s">hello</span> <span class="s">hello.c</span><span class="p">)</span>
+    <span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">hello</span> <span class="s">message</span><span class="p">)</span>
+<span class="nb">else</span><span class="p">()</span>
+    <span class="nb">add_executable</span><span class="p">(</span><span class="s">hello</span> <span class="s">hello.c</span> <span class="s">message.c</span> <span class="s">message.h</span><span class="p">)</span>
+<span class="nb">endif</span><span class="p">()</span>
+</pre></div>
+
+
+<p>OFF 代表关闭，if判断将失败，与之对应的是 ON 。</p>
+<h2 id="_5">修改编译器</h2>
+<p>通过修改 CMAKE_C_COMPILER 内置变量修改默认C语言编译器：</p>
+<div class="codehilite"><pre><span></span>$ cmake -DCMAKE_C_COMPILER<span class="o">=</span>clang
+</pre></div>
+
+
+<h2 id="_6">修改编译选项</h2>
+<p>我们可以通过两种方法修改编译选项：</p>
+<ul>
+<li>
+<p>使用  target_compile_options 命令</p>
+</li>
+<li>
+<p>修改 CMAKE_C_FLAGS, CMAKE_C_FLAGS_DEBUG, CMAKE_C_FLAGS_RELEASE 等内置变量</p>
+</li>
+</ul>
+<p>target_compile_options 使用如：</p>
+<div class="codehilite"><pre><span></span><span class="nb">target_compile_options</span><span class="p">(</span><span class="s">target</span>
+    <span class="s">PRIVATE</span>
+    <span class="o">${</span><span class="nv">flags</span><span class="o">}</span><span class="p">)</span>
+</pre></div>
+
+
+<p>它表示 target 目标采用了 flags 编译选项，并且用 PRIVATE 表示这个选项仅应用于本目标。</p>
+<p>如果改成 PUBLIC ，就表示依赖本目标的目标也采用 flags 。</p>
+<p>如果设置了 CMAKE_BUILD_TYPE 内置变量，则：</p>
+<ul>
+<li>没设置，采用 CMAKE_C_FLAGS</li>
+<li>设置为 debug , 采用 CMAKE_C_FLAGS_DEBUG</li>
+<li>设置为 release, 采用 CMAKE_C_FLAGS_RELEASE</li>
+</ul>
+<h2 id="_7">判断平台</h2>
+<div class="codehilite"><pre><span></span><span class="nb">if</span> <span class="p">(</span><span class="s">CMAKE_SYSTEM_NAME</span> <span class="s">STREQUAL</span> <span class="s2">&quot;Linux&quot;</span><span class="p">)</span>
+    <span class="c"># Linux</span>
+<span class="nb">elseif</span> <span class="p">(</span><span class="s">CMAKE_SYSTEM_NAME</span> <span class="s">STREQUAL</span> <span class="s2">&quot;Darwin&quot;</span><span class="p">)</span>
+    <span class="c"># MacOS</span>
+<span class="nb">elseif</span> <span class="p">(</span><span class="s">CMAKE_SYSTEM_NAME</span> <span class="s">STREQUAL</span> <span class="s2">&quot;Windows&quot;</span><span class="p">)</span>
+    <span class="c"># Windows</span>
+<span class="nb">endif</span><span class="p">()</span>
+</pre></div>
+
+
+<h2 id="_8">完整例子</h2>
+<h3 id="_9">单工程文件设定</h3>
+<div class="codehilite"><pre><span></span><span class="c"># 要求 cmake 最低版本</span>
+<span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span> <span class="s">2.8</span> <span class="s">FATAL_ERROR</span><span class="p">)</span>
+
+<span class="c"># 设置工程名</span>
+<span class="nb">project</span><span class="p">(</span><span class="s">project_name</span><span class="p">)</span>
+
+<span class="c"># 自定义变量</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">INCLUDE_DIR</span> <span class="o">${</span><span class="nv">PROJECT_SOURCE_DIR</span><span class="o">}</span><span class="s">/include</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">LINK_DIR</span> <span class="o">${</span><span class="nv">PROJECT_SOURCE_DIR</span><span class="o">}</span><span class="s">/lib</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">LIBS</span> <span class="s">m</span><span class="p">)</span>
+
+<span class="c"># 设定编译选项</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_FLAGS</span> <span class="s2">&quot;-g -Wall&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_FLAGS_DEBUG</span> <span class="s2">&quot;-g -Wall -D_DEBUG&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_FLAGS_RELEASE</span> <span class="s2">&quot;-Wall -DNDEBUG&quot;</span><span class="p">)</span>
+
+<span class="c"># 设定头文件包含目录</span>
+<span class="nb">include_directories</span><span class="p">(</span><span class="o">${</span><span class="nv">INCLUDE_DIR</span><span class="o">}</span><span class="p">)</span>
+
+<span class="c"># 设定链接目录</span>
+<span class="nb">link_directories</span><span class="p">(</span><span class="o">${</span><span class="nv">LINK_DIR</span><span class="o">}</span><span class="p">)</span>
+
+<span class="c"># 设定项目文件（递归搜索）</span>
+<span class="nb">file</span><span class="p">(</span><span class="s">GLOB_RECURSE</span> <span class="s">SRC_FILES</span>
+    <span class="o">${</span><span class="nv">PROJECT_SOURCE_DIR</span><span class="o">}</span><span class="s">/src/*.c</span>
+    <span class="o">${</span><span class="nv">PROJECT_SOURCE_DIR</span><span class="o">}</span><span class="s">/src/*.h</span><span class="p">)</span>
+
+<span class="c"># 设定输出目录</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">EXECUTABLE_OUTPUT_PATH</span> <span class="o">${</span><span class="nv">PROJECT_BINARY_DIR</span><span class="o">}</span><span class="s">/out</span><span class="p">)</span>
+
+<span class="c"># 设定可执行程序及生成它依赖的文件</span>
+<span class="nb">add_executable</span><span class="p">(</span><span class="s">main</span> <span class="o">${</span><span class="nv">SRC_FILES</span><span class="o">}</span><span class="p">)</span>
+
+<span class="c"># 设定可执行程序依赖的库</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">main</span> <span class="o">${</span><span class="nv">LIBS</span><span class="o">}</span><span class="p">)</span>
+</pre></div>
+
+
+<h3 id="_10">多工程文件设定</h3>
+<p>顶层 CMakeLists :</p>
+<div class="codehilite"><pre><span></span><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span> <span class="s">3.5</span> <span class="s">FATAL_ERROR</span><span class="p">)</span>
+
+<span class="c"># 设置工程名</span>
+<span class="nb">project</span><span class="p">(</span><span class="s">project_name</span><span class="p">)</span>
+
+<span class="c"># 自定义变量</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">INCLUDE_DIR</span> <span class="o">${</span><span class="nv">PROJECT_SOURCE_DIR</span><span class="o">}</span><span class="s">/include</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">LINK_DIR</span> <span class="o">${</span><span class="nv">PROJECT_SOURCE_DIR</span><span class="o">}</span><span class="s">/lib</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">LIBS</span> <span class="s">m</span><span class="p">)</span>
+
+<span class="c"># 设置编译选项</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_FLAGS</span> <span class="s2">&quot;-g -Wall&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_FLAGS_DEBUG</span> <span class="s2">&quot;-g -Wall -D_DEBUG&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_FLAGS_RELEASE</span> <span class="s2">&quot;-Wall -DNDEBUG&quot;</span><span class="p">)</span>
+
+<span class="c"># 设定头文件包含目录</span>
+<span class="nb">include_directories</span><span class="p">(</span><span class="o">${</span><span class="nv">INCLUDE_DIR</span><span class="o">}</span><span class="p">)</span>
+
+<span class="c"># 设定链接目录</span>
+<span class="nb">link_directories</span><span class="p">(</span><span class="o">${</span><span class="nv">LINK_DIR</span><span class="o">}</span><span class="p">)</span>
+
+<span class="c"># 设定输出目录</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">EXECUTABLE_OUTPUT_PATH</span> <span class="o">${</span><span class="nv">PROJECT_BINARY_DIR</span><span class="o">}</span><span class="s">/out</span><span class="p">)</span>
+
+<span class="c"># 引入子项目</span>
+<span class="nb">add_subdirectory</span><span class="p">(</span><span class="s">program</span><span class="p">)</span>
+</pre></div>
+
+
+<p>子项目 CMakeLists :</p>
+<div class="codehilite"><pre><span></span><span class="c"># 自定义变量</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">PROGRAM_INCLUDE_DIR</span> <span class="o">${</span><span class="nv">CMAKE_CURRENT_SOURCE_DIR</span><span class="o">}</span><span class="s">/include</span><span class="p">)</span>
+
+<span class="c"># 设定头文件包含目录</span>
+<span class="nb">include_directories</span><span class="p">(</span><span class="o">${</span><span class="nv">INCLUDE_DIR</span><span class="o">}</span> <span class="o">${</span><span class="nv">PROGRAM_INCLUDE_DIR</span><span class="o">}</span><span class="p">)</span>
+
+<span class="c"># 设定项目文件</span>
+<span class="nb">file</span><span class="p">(</span><span class="s">GLOB_RECURSE</span> <span class="s">SRC_FILES</span> <span class="s2">&quot;*.c&quot;</span> <span class="s2">&quot;*.h&quot;</span><span class="p">)</span>
+
+<span class="c"># 设置可执行程序依赖的文件</span>
+<span class="nb">add_executable</span><span class="p">(</span><span class="s">program_</span><span class="o">${</span><span class="nv">CMAKE_BUILD_TYPE</span><span class="o">}</span> <span class="o">${</span><span class="nv">SRC_FILES</span><span class="o">}</span><span class="p">)</span>
+
+<span class="c"># 设置可执行程序依赖的库</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">program_</span><span class="o">${</span><span class="nv">CMAKE_BUILD_TYPE</span><span class="o">}</span> <span class="o">${</span><span class="nv">LIBS</span><span class="o">}</span><span class="p">)</span>
+</pre></div>
+
+
+<h2 id="_11">命令速查</h2>
+<table>
+<thead>
+<tr>
+<th align="left">命令</th>
+<th align="left">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">设置头文件包含目录</td>
+<td align="left">include_directories(. ./include)</td>
+</tr>
+<tr>
+<td align="left">设置链接库目录</td>
+<td align="left">link_directories(./lib)</td>
+</tr>
+<tr>
+<td align="left">在vs中设置筛选器</td>
+<td align="left">source_group(filter FILES ${SRC})</td>
+</tr>
+<tr>
+<td align="left">设置vs中启动项目</td>
+<td align="left">set_property(DIRECTORY PROPERTY VS_STARTUP_PROJECT "project" )</td>
+</tr>
+</tbody>
+</table>
+<p>其他：</p>
+<p>设置一些自定义的命令。</p>
+<p>例如，在生成前和生成后执行以下命令行的命令：</p>
+<div class="codehilite"><pre><span></span><span class="c"># 生成前：更新一下 compileversion.cpp 文件，生成一个新的编译版本号</span>
+<span class="nb">add_custom_command</span><span class="p">(</span><span class="s">TARGET</span> <span class="s">EXEgameworld_</span><span class="o">${</span><span class="nv">ARPG_BUILD_TYPE</span><span class="o">}</span>
+    <span class="s">PRE_BUILD</span>
+    <span class="s">COMMAND</span> <span class="s">echo</span> <span class="s">[PRE_BUILD]</span> <span class="s">Update</span> <span class="s">compileversion</span> <span class="s">for</span> <span class="s">gameworld</span>
+    <span class="s">COMMAND</span> <span class="s">copy</span> <span class="s">/B</span> <span class="s">compileversion.cpp</span> <span class="s">+,,</span> <span class="s">&gt;</span> <span class="s">nul</span>
+    <span class="s">COMMENT</span> <span class="s2">&quot;Update compileversion&quot;</span>
+    <span class="s">WORKING_DIRECTORY</span> <span class="o">${</span><span class="nv">PROJECT_SOURCE_DIR</span><span class="o">}</span><span class="s">/gameworld</span>
+<span class="p">)</span>
+
+<span class="c"># 生成完：将 EXEgameworld 拷贝到给 check_config</span>
+<span class="nb">add_custom_command</span><span class="p">(</span><span class="s">TARGET</span> <span class="s">EXEgameworld_</span><span class="o">${</span><span class="nv">ARPG_BUILD_TYPE</span><span class="o">}</span>
+    <span class="s">POST_BUILD</span>
+    <span class="s">COMMAND</span> <span class="s">echo</span> <span class="s">[POST_BUILD]</span> <span class="s">copy</span> <span class="s">EXEgameworld</span> <span class="s">for</span> <span class="s">check_config</span>
+    <span class="s">COMMAND</span> <span class="s">copy</span> <span class="s">vsproject\\Debug\\EXEgameworld_debug.exe</span> <span class="s">config\\server_opera_tools\\bin</span>
+    <span class="s">WORKING_DIRECTORY</span> <span class="o">${</span><span class="nv">PROJECT_SOURCE_DIR</span><span class="o">}</span><span class="s">/</span>
+<span class="p">)</span>
+</pre></div>
+
+
+<h2 id="_12">变量速查</h2>
+<table>
+<thead>
+<tr>
+<th align="left">变量</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">PROJECT_BINARY_DIR</td>
+<td align="left">build的目录</td>
+</tr>
+<tr>
+<td align="left">PROJECT_SOURCE_DIR</td>
+<td align="left">顶层CMakeLists.txt所在目录</td>
+</tr>
+<tr>
+<td align="left">CMAKE_CURRENT_SOURCE_DIR</td>
+<td align="left">当前处理的CMakeLists.txt所在路径</td>
+</tr>
+<tr>
+<td align="left">EXECUTABLE_OUTPUT_PATH</td>
+<td align="left">可执行程序的生成目录</td>
+</tr>
+<tr>
+<td align="left">LIBRARY_OUTPUT_PATH</td>
+<td align="left">库的生成目录</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../vim/settings/" class="btn btn-neutral float-right" title="settings">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../debug_by_gdb/" class="btn btn-neutral" title="debug by gdb"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; since 2019 Diwen Liu</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/demon90s/Help_Me_Mysql/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../debug_by_gdb/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../vim/settings/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

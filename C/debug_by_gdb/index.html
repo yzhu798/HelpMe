@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>16 execute_sql_in_shell - Help Me Please!!!</title>
+  <title>debug by gdb - Help Me Please!!!</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "16 execute_sql_in_shell";
-    var mkdocs_page_input_path = "Mysql/16_execute_sql_in_shell.md";
+    var mkdocs_page_name = "debug by gdb";
+    var mkdocs_page_input_path = "C/debug_by_gdb.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -59,35 +59,51 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../C/HelloWorld/">HelloWorld</a>
+    <a class="" href="../HelloWorld/">HelloWorld</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../C/Makefile/">Makefile</a>
+    <a class="" href="../Makefile/">Makefile</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../C/static_library/">static library</a>
+    <a class="" href="../static_library/">static library</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../C/shared_library/">shared library</a>
+    <a class="" href="../shared_library/">shared library</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../C/format_code/">format code</a>
+    <a class="" href="../format_code/">format code</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../C/command-line_args/">command-line_args</a>
+    <a class="" href="../command-line_args/">command-line_args</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">debug by gdb</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#debug-by-gdb">debug by gdb</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#_1">常用调试命令</a></li>
+        
+            <li><a class="toctree-l4" href="#_2">使用脚本调试</a></li>
+        
+            <li><a class="toctree-l4" href="#core">core 文件</a></li>
+        
+        </ul>
+    
+
+    </ul>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../C/debug_by_gdb/">debug by gdb</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../C/cmake/">cmake</a>
+    <a class="" href="../cmake/">cmake</a>
                 </li>
     </ul>
 	    </li>
@@ -129,77 +145,71 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../01_install/">01 install</a>
+    <a class="" href="../../Mysql/01_install/">01 install</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../02_create_user/">02 create user</a>
+    <a class="" href="../../Mysql/02_create_user/">02 create user</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../03_create_db/">03 create db</a>
+    <a class="" href="../../Mysql/03_create_db/">03 create db</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../04_drop_db/">04 drop db</a>
+    <a class="" href="../../Mysql/04_drop_db/">04 drop db</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../05_show_db/">05 show db</a>
+    <a class="" href="../../Mysql/05_show_db/">05 show db</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../06_create_table/">06 create table</a>
+    <a class="" href="../../Mysql/06_create_table/">06 create table</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../07_drop_table/">07 drop table</a>
+    <a class="" href="../../Mysql/07_drop_table/">07 drop table</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../08_insert_record/">08 insert record</a>
+    <a class="" href="../../Mysql/08_insert_record/">08 insert record</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../09_remove_record/">09 remove record</a>
+    <a class="" href="../../Mysql/09_remove_record/">09 remove record</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../10_update_record/">10 update record</a>
+    <a class="" href="../../Mysql/10_update_record/">10 update record</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../11_alter_table/">11 alter table</a>
+    <a class="" href="../../Mysql/11_alter_table/">11 alter table</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../12_show_column/">12 show column</a>
+    <a class="" href="../../Mysql/12_show_column/">12 show column</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../13_select/">13 select</a>
+    <a class="" href="../../Mysql/13_select/">13 select</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../14_mysqldump/">14 mysqldump</a>
+    <a class="" href="../../Mysql/14_mysqldump/">14 mysqldump</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../15_functions/">15 functions</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">16 execute_sql_in_shell</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#16-execute-sql-in-shell">16 execute sql in shell</a></li>
-    
-
-    </ul>
+    <a class="" href="../../Mysql/15_functions/">15 functions</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../17_privileges/">17 privileges</a>
+    <a class="" href="../../Mysql/16_execute_sql_in_shell/">16 execute_sql_in_shell</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Mysql/17_privileges/">17 privileges</a>
                 </li>
     </ul>
 	    </li>
@@ -226,14 +236,14 @@
     
       
         
-          <li>Mysql &raquo;</li>
+          <li>C &raquo;</li>
         
       
     
-    <li>16 execute_sql_in_shell</li>
+    <li>debug by gdb</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/demon90s/Help_Me_Mysql/tree/master/notes/Mysql/16_execute_sql_in_shell.md"
+        <a href="https://github.com/demon90s/Help_Me_Mysql/tree/master/notes/C/debug_by_gdb.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -243,17 +253,95 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="16-execute-sql-in-shell">16 execute sql in shell</h1>
-<p>方法是使用 --execute 命令参数。</p>
-<p>在shell下面，执行一条sql语句：</p>
-<div class="codehilite"><pre><span></span>$ mysql -u diwen -p foo --execute<span class="o">=</span><span class="s2">&quot;SHOW TABLES&quot;</span>
+                <h1 id="debug-by-gdb">debug by gdb</h1>
+<p>加入-g编译选项（编译链接都加），才令可执行程序支持gdb调试。</p>
+<p><strong>启动并调试一个程序</strong></p>
+<div class="codehilite"><pre><span></span>$ gdb prog
 </pre></div>
 
 
-<p>这种方式不需要在sql后面添加分号。</p>
-<p>默认的查询会带列的名字，下面的方法把它去掉：</p>
-<div class="codehilite"><pre><span></span>$ mysql -u diwen -p --skip-column-names --execute <span class="s1">&#39;SELECT * FROM foo.role&#39;</span>
+<p><strong>附加进程调试</strong></p>
+<div class="codehilite"><pre><span></span>$ gdb -p PID
 </pre></div>
+
+
+<p><strong>调试一个core文件</strong></p>
+<div class="codehilite"><pre><span></span>$ gdb prog core
+</pre></div>
+
+
+<p><strong>调试死循环</strong></p>
+<p>直接gdb附加进程后，使用bt命令查看调用堆栈即可。</p>
+<h2 id="_1">常用调试命令</h2>
+<div class="codehilite"><pre><span></span>&gt; set args [arg_list]   # 设置程序的启动参数
+&gt; set print pretty on   # 友好的输出格式
+
+&gt; p variable            # 查看变量内容
+&gt; ptype variable        # 查看变量的定义
+
+&gt; bt                    # 查看调用堆栈
+&gt; f n                   # 跳到第n个stack frame
+&gt; n                     # step over
+&gt; s                     # step in
+&gt; finish                # 直接执行完当前的函数（仍保持断点调试状态）
+&gt; b file:line           # 在文件的某一行设置断点
+&gt; delete break          # 删除所有的断点
+
+&gt; q                     # 退出调试
+&gt; c                     # 继续执行程序
+&gt; run                   # 开始执行程序
+&gt; handle SIGINT nostop pass # 忽略掉 SIGINT 信号, 使其可以传递给调试程序, 默认gdb会拦截掉 SIGINT 信号
+</pre></div>
+
+
+<p>可以这样输出数组中有限数量的元素：</p>
+<div class="codehilite"><pre><span></span><span class="p">(</span><span class="n">gdb</span><span class="p">)</span> <span class="n">p</span> <span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="mi">@3</span>
+</pre></div>
+
+
+<p>如上，输出了数组 array 从第0个元素开始后三个元素。</p>
+<h2 id="_2">使用脚本调试</h2>
+<p>gdb加入参数-x script，即可使用脚本调试。</p>
+<p>脚本模板：</p>
+<div class="codehilite"><pre><span></span>b somewhere [if ... [&amp;&amp;] ... [||] ...]
+c
+p some_variables
+q
+</pre></div>
+
+
+<p>可以在break后接commands命令，在每次触发断点后直接打印一些值：</p>
+<div class="codehilite"><pre><span></span>b somewhere
+commands
+printf &quot;%d\n&quot;, some_number
+c
+end
+c
+</pre></div>
+
+
+<p>脚本调试时, 可以修改变量的值, 或者调用函数, 方法是:</p>
+<ul>
+<li>修改变量的值: set var = 42</li>
+<li>调用函数: call this-&gt;SomeFunc(paramlist)</li>
+</ul>
+<p>函数调用需要把参数填写满。</p>
+<h2 id="core">core 文件</h2>
+<p>令程序在崩溃时生成core文件：修改 .bashrc 或 /etc/profile，添加<code>ulimit -c unlimited</code>。意思是生成无限制大小的 core 文件。</p>
+<p>core 文件默认产生在程序的执行路径，如果要设置 core 文件产生的路径，需要这样：</p>
+<div class="codehilite"><pre><span></span>su -
+<span class="nb">echo</span> <span class="s2">&quot;core-%e-%t&quot;</span> &gt; /proc/sys/kernel/core_pattern <span class="c1"># 生成到程序执行路径</span>
+<span class="nb">echo</span> <span class="s2">&quot;/tmp/coredump/core-%e-%t&quot;</span> /proc/sys/kernel/core_pattern <span class="c1"># 生成到 /tmp/coredump</span>
+</pre></div>
+
+
+<p>参数的意思是：</p>
+<ul>
+<li>%e 启动程序</li>
+<li>%t core 文件产生时的 UNIX 时间戳</li>
+<li>%p 程序的 pid</li>
+<li>%s 产生的信号</li>
+</ul>
               
             </div>
           </div>
@@ -261,10 +349,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../17_privileges/" class="btn btn-neutral float-right" title="17 privileges">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../cmake/" class="btn btn-neutral float-right" title="cmake">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../15_functions/" class="btn btn-neutral" title="15 functions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../command-line_args/" class="btn btn-neutral" title="command-line_args"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -294,10 +382,10 @@
           <a href="https://github.com/demon90s/Help_Me_Mysql/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../15_functions/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../command-line_args/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../17_privileges/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../cmake/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
