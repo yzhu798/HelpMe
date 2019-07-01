@@ -3,14 +3,14 @@
 获取命令行参数：
 
 ```
-$ ./06_cmd bar 123 x
+$ ./main bar 123 x
 ```
 
 参数为：
 
 argc: 4
 
-argv: {"./06_cmd", "bar", "123", "x", NULL}
+argv: {"./main", "bar", "123", "x", NULL}
 
 编写程序实验：
 

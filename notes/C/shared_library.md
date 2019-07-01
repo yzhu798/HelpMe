@@ -1,6 +1,6 @@
-# 04 shared library
+# shared library
 
-创建文件 04_helloworld.c:
+创建文件 helloworld.c:
 
 ```c
 #include <stdio.h>
@@ -14,7 +14,7 @@ void helloworld()
 build shared library:
 
 ```
-$ gcc -shared -o libhelloworld.so -fPIC 04_helloworld.c
+$ gcc -shared -o libhelloworld.so -fPIC helloworld.c
 ```
 
 ## Link shared library

@@ -1,6 +1,6 @@
-# 03 static library
+# static library
 
-创建文件 03_helloworld.c:
+创建文件 helloworld.c:
 
 ```c
 #include <stdio.h>
@@ -14,8 +14,8 @@ void helloworld()
 build static library:
 
 ```
-$ gcc -o 03_helloworld.o -c 03_helloworld.c
-$ ar crv libhelloworld.a 03_helloworld.o
+$ gcc -o helloworld.o -c helloworld.c
+$ ar crv libhelloworld.a helloworld.o
 ```
 
 查看符号表：

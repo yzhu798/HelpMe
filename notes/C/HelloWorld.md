@@ -1,7 +1,7 @@
-# 01 Hello World
+# Hello World
 
 ```c
-// 01_helloworld.c
+// helloworld.c
 #include <stdio.h>
 
 int main()

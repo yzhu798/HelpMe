@@ -1,4 +1,4 @@
-# 07 debug by gdb
+# debug by gdb
 
 加入-g编译选项（编译链接都加），才令可执行程序支持gdb调试。
 

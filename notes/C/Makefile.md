@@ -1,22 +1,22 @@
-# 02 Makefile
+# Makefile
 
-Makefile for build 01_helloworld.c:
+Makefile for build helloworld.c:
 
 ```makefile
-# 02_Makefile
+# Makefile
 CC = gcc
 CFLAGS = -g -Wall -std=c99
 
-all: 01_helloworld
+all: helloworld
 
 clean:
-	-rm -f 01_helloworld
+	-rm -f helloworld
 ```
 
 build:
 
 ```
-$ make -f 02_Makefile
+$ make
 ```
 
 ## How?
@@ -38,3 +38,11 @@ $ make -f 02_Makefile
 ```makefile
 MYSQL_INCLUDE = $(shell mysql_config --cflags) # 把 mysql_config --cflags 的输出内容赋给 MYSQL_INCLUDE
 ```
+
+如果想build更快，可以采用多线程编译：
+
+```
+$ make -j8
+```
+
+采用了8个线程。

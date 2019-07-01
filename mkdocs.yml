@@ -11,13 +11,14 @@ edit_uri: "tree/master/notes"
 nav:
   - About: index.md
   - C:
-    - 01 HelloWorld: C/01_HelloWorld.md
-    - 02 Makefile: C/02_Makefile.md
-    - 03 static library: C/03_static_library.md
-    - 04 shared library: C/04_shared_library.md
-    - 05 format code: C/05_format_code.md
-    - 06 command-line_args: C/06_command-line_args.md
-    - 07 debug by gdb: C/07_debug_by_gdb.md
+    - HelloWorld: C/HelloWorld.md
+    - Makefile: C/Makefile.md
+    - static library: C/static_library.md
+    - shared library: C/shared_library.md
+    - format code: C/format_code.md
+    - command-line_args: C/command-line_args.md
+    - debug by gdb: C/debug_by_gdb.md
+    - cmake: C/cmake.md
   - vim:
     - settings: vim/settings.md
     - file edit: vim/file_edit.md
@@ -46,22 +47,9 @@ nav:
 
 theme:
   #name: 'material'
-  name: mkdocs
+  name: readthedocs
   logo:
     icon: 'school'
-  palette:
-    #primary: 'blue'
-    #accent: 'blue'
-  font:
-    #text: 'Open Sans'
-    #code: 'Open Sans Mono'
-  language: 'zh'
 
 markdown_extensions:
-  - admonition
   - codehilite
-  - pymdownx.mark
-
-google_analytics:
-  - 'UA-XXXXXXXX-X'
-  - 'auto'
