@@ -114,6 +114,8 @@ done
 
 无限循环。true和false直接表示了条件成功或失败。
 
+可以使用 continue 结束本次循环，break 跳出循环。
+
 ## case
 
 ```bash
