@@ -24,6 +24,7 @@ nav:
     - 获取命令输出: shell/获取命令输出.md
     - 字符串操作: shell/字符串操作.md
     - 设置输出字体: shell/设置输出字体.md
+    - bc: shell/bc.md
   - vim:
     - settings: vim/settings.md
     - file edit: vim/file_edit.md
