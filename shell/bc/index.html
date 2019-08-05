@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>format code - Help Me Please!!!</title>
+  <title>bc - Help Me Please!!!</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "format code";
-    var mkdocs_page_input_path = "C/format_code.md";
+    var mkdocs_page_name = "bc";
+    var mkdocs_page_input_path = "shell/bc.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -59,44 +59,35 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../HelloWorld/">HelloWorld</a>
+    <a class="" href="../../C/HelloWorld/">HelloWorld</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../Makefile/">Makefile</a>
+    <a class="" href="../../C/Makefile/">Makefile</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../static_library/">static library</a>
+    <a class="" href="../../C/static_library/">static library</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../shared_library/">shared library</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">format code</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#format-code">format code</a></li>
-    
-
-    <li class="toctree-l3"><a href="#format-failed-reason">format failed reason</a></li>
-    
-
-    </ul>
+    <a class="" href="../../C/shared_library/">shared library</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../command-line_args/">command-line_args</a>
+    <a class="" href="../../C/format_code/">format code</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../debug_by_gdb/">debug by gdb</a>
+    <a class="" href="../../C/command-line_args/">command-line_args</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../cmake/">cmake</a>
+    <a class="" href="../../C/debug_by_gdb/">debug by gdb</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../C/cmake/">cmake</a>
                 </li>
     </ul>
 	    </li>
@@ -107,27 +98,39 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../shell/grammer/">grammer</a>
+    <a class="" href="../grammer/">grammer</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../shell/获取命令输出/">获取命令输出</a>
+    <a class="" href="../获取命令输出/">获取命令输出</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../shell/字符串操作/">字符串操作</a>
+    <a class="" href="../字符串操作/">字符串操作</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../shell/设置输出字体/">设置输出字体</a>
+    <a class="" href="../设置输出字体/">设置输出字体</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">bc</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#bc">bc</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#_1">工具程序</a></li>
+        
+        </ul>
+    
+
+    </ul>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../shell/bc/">bc</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../shell/ln/">ln</a>
+    <a class="" href="../ln/">ln</a>
                 </li>
     </ul>
 	    </li>
@@ -260,14 +263,14 @@
     
       
         
-          <li>C &raquo;</li>
+          <li>shell &raquo;</li>
         
       
     
-    <li>format code</li>
+    <li>bc</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/demon90s/Help_Me_Mysql/tree/master/notes/C/format_code.md"
+        <a href="https://github.com/demon90s/Help_Me_Mysql/tree/master/notes/shell/bc.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -277,32 +280,76 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="format-code">format code</h1>
-<p>use astyle:</p>
-<div class="codehilite"><pre><span></span>astyle --style<span class="o">=</span>stroustrup --indent<span class="o">=</span>tab --align-pointer<span class="o">=</span><span class="nb">type</span> --recursive ./*.c,*.h
-
-find . -name <span class="s2">&quot;*.orig&quot;</span> <span class="p">|</span> xargs rm -f
+                <h1 id="bc">bc</h1>
+<p>bc命令用来支持算术运算。它默认是交互模式运行的，但可以用管道传递算术表达式给它，获取输出。</p>
+<div class="codehilite"><pre><span></span><span class="nv">res</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;5 / 5&quot;</span> <span class="p">|</span> bc -l<span class="k">)</span>
+<span class="nb">echo</span> <span class="nv">$res</span>
 </pre></div>
 
 
-<p>How to install: </p>
-<div class="codehilite"><pre><span></span>$ sudo apt install astyle
+<p>结果是1.25。</p>
+<p>bc -l 表示启用一个标准的数学库，它默认支持浮点运算。</p>
+<div class="codehilite"><pre><span></span><span class="nv">res</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;4 * 5&quot;</span> <span class="p">|</span> bc -l<span class="k">)</span>
+<span class="nb">echo</span> <span class="nv">$res</span>
 </pre></div>
 
 
-<h1 id="format-failed-reason">format failed reason</h1>
-<p>最好把文件弄成unix下的utf-8格式。windows下面的文件换行符会影响到格式化。</p>
-<p>使用下面的脚本把这个换行符干掉：</p>
-<div class="codehilite"><pre><span></span><span class="ch">#! /bin/bash</span>
+<p>结果是20。</p>
+<p>bc 可以用于进制转换：</p>
+<div class="codehilite"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;obase=16;20&quot;</span> <span class="p">|</span> bc
+</pre></div>
 
-<span class="c1"># cut the last ^M of the line</span>
-<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-        <span class="nb">echo</span> <span class="s2">&quot;no input file&quot;</span>
-        <span class="nb">exit</span> <span class="m">1</span>
-<span class="k">fi</span>
 
-tr -d <span class="s2">&quot;\015&quot;</span> &lt; <span class="nv">$1</span> &gt; <span class="nv">$1</span>.bak
-mv <span class="nv">$1</span>.bak <span class="nv">$1</span>
+<p>设置输出进制为16进制，默认输入进制为10进制，输入数字为20，输出它的16进制表示，结果是14。</p>
+<p>输入进制选项为ibase。</p>
+<h2 id="_1">工具程序</h2>
+<div class="codehilite"><pre><span></span><span class="c1"># 计算输出算术表达式的结果</span>
+f_calc<span class="o">()</span>
+<span class="o">{</span>
+    <span class="nv">expression</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+    <span class="k">if</span> <span class="o">[</span> -z <span class="s2">&quot;</span><span class="nv">$expression</span><span class="s2">&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+            <span class="k">return</span> <span class="m">1</span>
+    <span class="k">fi</span>
+    <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$expression</span><span class="s2">&quot;</span> <span class="p">|</span> bc -l
+<span class="o">}</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="c1"># 16进制转10进制</span>
+f_hextodec<span class="o">()</span>
+<span class="o">{</span>
+    <span class="nb">echo</span> <span class="s2">&quot;obase=10;ibase=16;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="p">|</span> bc
+<span class="o">}</span>
+
+<span class="c1"># 10进制转16进制</span>
+f_dectohex<span class="o">()</span>
+<span class="o">{</span>
+    <span class="nb">echo</span> <span class="s2">&quot;obase=16;ibase=10;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="p">|</span> bc
+<span class="o">}</span>
+
+<span class="c1"># 2进制转10进制</span>
+f_bintodec<span class="o">()</span>
+<span class="o">{</span>
+    <span class="nb">echo</span> <span class="s2">&quot;obase=10;ibase=2;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="p">|</span> bc
+<span class="o">}</span>
+
+<span class="c1"># 10进制转2进制</span>
+f_dectobin<span class="o">()</span>
+<span class="o">{</span>
+    <span class="nb">echo</span> <span class="s2">&quot;obase=2;ibase=10;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="p">|</span> bc
+<span class="o">}</span>
+
+<span class="c1"># 16进制转2进制</span>
+f_hextobin<span class="o">()</span>
+<span class="o">{</span>
+    <span class="nb">echo</span> <span class="s2">&quot;obase=2;ibase=16;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="p">|</span> bc
+<span class="o">}</span>
+
+<span class="c1"># 2进制转16进制</span>
+f_bintohex<span class="o">()</span>
+<span class="o">{</span>
+    <span class="nb">echo</span> <span class="s2">&quot;obase=16;ibase=2;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="p">|</span> bc
+<span class="o">}</span>
 </pre></div>
               
             </div>
@@ -311,10 +358,10 @@ mv <span class="nv">$1</span>.bak <span class="nv">$1</span>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../command-line_args/" class="btn btn-neutral float-right" title="command-line_args">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../ln/" class="btn btn-neutral float-right" title="ln">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../shared_library/" class="btn btn-neutral" title="shared library"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../设置输出字体/" class="btn btn-neutral" title="设置输出字体"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -344,10 +391,10 @@ mv <span class="nv">$1</span>.bak <span class="nv">$1</span>
           <a href="https://github.com/demon90s/Help_Me_Mysql/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../shared_library/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../设置输出字体/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../command-line_args/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../ln/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

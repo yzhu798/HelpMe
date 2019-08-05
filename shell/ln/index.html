@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>format code - Help Me Please!!!</title>
+  <title>ln - Help Me Please!!!</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "format code";
-    var mkdocs_page_input_path = "C/format_code.md";
+    var mkdocs_page_name = "ln";
+    var mkdocs_page_input_path = "shell/ln.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -59,44 +59,35 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../HelloWorld/">HelloWorld</a>
+    <a class="" href="../../C/HelloWorld/">HelloWorld</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../Makefile/">Makefile</a>
+    <a class="" href="../../C/Makefile/">Makefile</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../static_library/">static library</a>
+    <a class="" href="../../C/static_library/">static library</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../shared_library/">shared library</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">format code</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#format-code">format code</a></li>
-    
-
-    <li class="toctree-l3"><a href="#format-failed-reason">format failed reason</a></li>
-    
-
-    </ul>
+    <a class="" href="../../C/shared_library/">shared library</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../command-line_args/">command-line_args</a>
+    <a class="" href="../../C/format_code/">format code</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../debug_by_gdb/">debug by gdb</a>
+    <a class="" href="../../C/command-line_args/">command-line_args</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../cmake/">cmake</a>
+    <a class="" href="../../C/debug_by_gdb/">debug by gdb</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../C/cmake/">cmake</a>
                 </li>
     </ul>
 	    </li>
@@ -107,27 +98,33 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../shell/grammer/">grammer</a>
+    <a class="" href="../grammer/">grammer</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../shell/获取命令输出/">获取命令输出</a>
+    <a class="" href="../获取命令输出/">获取命令输出</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../shell/字符串操作/">字符串操作</a>
+    <a class="" href="../字符串操作/">字符串操作</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../shell/设置输出字体/">设置输出字体</a>
+    <a class="" href="../设置输出字体/">设置输出字体</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../shell/bc/">bc</a>
+    <a class="" href="../bc/">bc</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../../shell/ln/">ln</a>
+    <a class="current" href="./">ln</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#ln">ln</a></li>
+    
+
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -260,14 +257,14 @@
     
       
         
-          <li>C &raquo;</li>
+          <li>shell &raquo;</li>
         
       
     
-    <li>format code</li>
+    <li>ln</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/demon90s/Help_Me_Mysql/tree/master/notes/C/format_code.md"
+        <a href="https://github.com/demon90s/Help_Me_Mysql/tree/master/notes/shell/ln.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -277,33 +274,23 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="format-code">format code</h1>
-<p>use astyle:</p>
-<div class="codehilite"><pre><span></span>astyle --style<span class="o">=</span>stroustrup --indent<span class="o">=</span>tab --align-pointer<span class="o">=</span><span class="nb">type</span> --recursive ./*.c,*.h
-
-find . -name <span class="s2">&quot;*.orig&quot;</span> <span class="p">|</span> xargs rm -f
+                <h1 id="ln">ln</h1>
+<p>ln 命令用来创建硬链接或者软链接。</p>
+<div class="codehilite"><pre><span></span>ln foo foo_ln
 </pre></div>
 
 
-<p>How to install: </p>
-<div class="codehilite"><pre><span></span>$ sudo apt install astyle
+<p>创建一个硬链接 foo_ln 。如果链接存在，则会有错误提示。</p>
+<div class="codehilite"><pre><span></span>ln -f foo foo_ln
 </pre></div>
 
 
-<h1 id="format-failed-reason">format failed reason</h1>
-<p>最好把文件弄成unix下的utf-8格式。windows下面的文件换行符会影响到格式化。</p>
-<p>使用下面的脚本把这个换行符干掉：</p>
-<div class="codehilite"><pre><span></span><span class="ch">#! /bin/bash</span>
-
-<span class="c1"># cut the last ^M of the line</span>
-<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-        <span class="nb">echo</span> <span class="s2">&quot;no input file&quot;</span>
-        <span class="nb">exit</span> <span class="m">1</span>
-<span class="k">fi</span>
-
-tr -d <span class="s2">&quot;\015&quot;</span> &lt; <span class="nv">$1</span> &gt; <span class="nv">$1</span>.bak
-mv <span class="nv">$1</span>.bak <span class="nv">$1</span>
+<p>强行创建硬链接，如果链接存在，无妨。</p>
+<div class="codehilite"><pre><span></span>ln -s foo foo_symbol_ln
 </pre></div>
+
+
+<p>创建一个软链接 foo_symbol_ln 。如果链接存在，则会有错误提示，加-f去掉。</p>
               
             </div>
           </div>
@@ -311,10 +298,10 @@ mv <span class="nv">$1</span>.bak <span class="nv">$1</span>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../command-line_args/" class="btn btn-neutral float-right" title="command-line_args">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../vim/settings/" class="btn btn-neutral float-right" title="settings">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../shared_library/" class="btn btn-neutral" title="shared library"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../bc/" class="btn btn-neutral" title="bc"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -344,10 +331,10 @@ mv <span class="nv">$1</span>.bak <span class="nv">$1</span>
           <a href="https://github.com/demon90s/Help_Me_Mysql/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../shared_library/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../bc/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../command-line_args/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../vim/settings/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
