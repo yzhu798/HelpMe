@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>file navigation - Help Me Please!!!</title>
+  <title>设置输出字体 - Help Me Please!!!</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "file navigation";
-    var mkdocs_page_input_path = "vim/file_navigation.md";
+    var mkdocs_page_name = "\u8bbe\u7f6e\u8f93\u51fa\u5b57\u4f53";
+    var mkdocs_page_input_path = "shell/\u8bbe\u7f6e\u8f93\u51fa\u5b57\u4f53.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -98,19 +98,25 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../shell/grammer/">grammer</a>
+    <a class="" href="../grammer/">grammer</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../shell/获取命令输出/">获取命令输出</a>
+    <a class="" href="../获取命令输出/">获取命令输出</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../shell/字符串操作/">字符串操作</a>
+    <a class="" href="../字符串操作/">字符串操作</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../../shell/设置输出字体/">设置输出字体</a>
+    <a class="current" href="./">设置输出字体</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#_1">设置输出字体</a></li>
+    
+
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -121,33 +127,27 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../settings/">settings</a>
+    <a class="" href="../../vim/settings/">settings</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../file_edit/">file edit</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">file navigation</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#file-navigation">file navigation</a></li>
-    
-
-    </ul>
+    <a class="" href="../../vim/file_edit/">file edit</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../shell_command/">shell command</a>
+    <a class="" href="../../vim/file_navigation/">file navigation</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../window/">window</a>
+    <a class="" href="../../vim/shell_command/">shell command</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../file_buffer/">file buffer</a>
+    <a class="" href="../../vim/window/">window</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../vim/file_buffer/">file buffer</a>
                 </li>
     </ul>
 	    </li>
@@ -249,14 +249,14 @@
     
       
         
-          <li>vim &raquo;</li>
+          <li>shell &raquo;</li>
         
       
     
-    <li>file navigation</li>
+    <li>设置输出字体</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/demon90s/Help_Me_Mysql/tree/master/notes/vim/file_navigation.md"
+        <a href="https://github.com/demon90s/Help_Me_Mysql/tree/master/notes/shell/设置输出字体.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -266,77 +266,228 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="file-navigation">file navigation</h1>
+                <h1 id="_1">设置输出字体</h1>
+<p>通过echo一个字体格式来设置字体。</p>
+<p>格式如：</p>
+<div class="codehilite"><pre><span></span><span class="nb">echo</span> -e <span class="s2">&quot;\033[30;41;1m\c&quot;</span>
+</pre></div>
+
+
+<ul>
+<li>\033[ 表示格式开始</li>
+<li>m 表示格式结束</li>
+<li>30;41;1 表示要设置的文字属性，用;隔开</li>
+<li>\c 表示结尾不要输出换行符，和 -e 选项配合使用</li>
+</ul>
+<p>属性有：</p>
 <table>
 <thead>
 <tr>
-<th align="left">操作</th>
-<th align="left">命令</th>
+<th align="center">编号</th>
+<th align="center">属性</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">显示文件名</td>
-<td align="left">ctrl + g</td>
+<td align="center">30</td>
+<td align="center">字体黑色</td>
 </tr>
 <tr>
-<td align="left">左右移动一个字符</td>
-<td align="left">hl</td>
+<td align="center">31</td>
+<td align="center">字体红色</td>
 </tr>
 <tr>
-<td align="left">上下移动一行</td>
-<td align="left">kj</td>
+<td align="center">32</td>
+<td align="center">字体绿色</td>
 </tr>
 <tr>
-<td align="left">移动/后退一个单词</td>
-<td align="left">wb</td>
+<td align="center">33</td>
+<td align="center">字体黄色</td>
 </tr>
 <tr>
-<td align="left">向下滚动一页</td>
-<td align="left">ctrl + f</td>
+<td align="center">34</td>
+<td align="center">字体蓝色</td>
 </tr>
 <tr>
-<td align="left">向上滚动一页</td>
-<td align="left">ctrl + b</td>
+<td align="center">35</td>
+<td align="center">字体紫色</td>
 </tr>
 <tr>
-<td align="left">向下滚动半页</td>
-<td align="left">ctrl + d</td>
+<td align="center">36</td>
+<td align="center">字体天蓝色</td>
 </tr>
 <tr>
-<td align="left">向上滚动半页</td>
-<td align="left">ctrl + u</td>
+<td align="center">37</td>
+<td align="center">字体白色</td>
 </tr>
 <tr>
-<td align="left">移动到第一行</td>
-<td align="left">gg</td>
+<td align="center">40</td>
+<td align="center">背景黑色</td>
 </tr>
 <tr>
-<td align="left">移动到最后一行</td>
-<td align="left">G</td>
+<td align="center">41</td>
+<td align="center">背景红色</td>
 </tr>
 <tr>
-<td align="left">移动到第n行</td>
-<td align="left">:n</td>
+<td align="center">42</td>
+<td align="center">背景绿色</td>
 </tr>
 <tr>
-<td align="left">搜索文本foo</td>
-<td align="left">/foo</td>
+<td align="center">43</td>
+<td align="center">背景黄色</td>
 </tr>
 <tr>
-<td align="left">跳到下一个搜索结果</td>
-<td align="left">n</td>
+<td align="center">44</td>
+<td align="center">背景蓝色</td>
 </tr>
 <tr>
-<td align="left">跳到上一个搜索结果</td>
-<td align="left">N</td>
+<td align="center">45</td>
+<td align="center">背景紫色</td>
 </tr>
 <tr>
-<td align="left">替换所有foo为bar</td>
-<td align="left">:%s/foo/bar/g</td>
+<td align="center">46</td>
+<td align="center">背景天蓝色</td>
+</tr>
+<tr>
+<td align="center">47</td>
+<td align="center">背景白色</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">关闭所有属性</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">文字高亮</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">下划线</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">闪烁</td>
 </tr>
 </tbody>
 </table>
+<p>完整案例：</p>
+<div class="codehilite"><pre><span></span><span class="ch">#! /bin/bash</span>
+
+<span class="c1"># set default</span>
+set_color_default<span class="o">()</span>
+<span class="o">{</span>
+    <span class="nb">echo</span> -e <span class="s2">&quot;\033[0m\c&quot;</span>
+<span class="o">}</span>
+
+<span class="c1"># set black text, white bg</span>
+set_black_text_white_bg<span class="o">()</span>
+<span class="o">{</span>
+    <span class="nb">echo</span> -e <span class="s2">&quot;\033[30;47m\c&quot;</span>
+<span class="o">}</span>
+
+<span class="c1"># set red text</span>
+set_red_text<span class="o">()</span>
+<span class="o">{</span>
+    <span class="nb">echo</span> -e <span class="s2">&quot;\033[31m\c&quot;</span>
+<span class="o">}</span>
+
+<span class="c1"># set green text</span>
+set_green_text<span class="o">()</span>
+<span class="o">{</span>
+    <span class="nb">echo</span> -e <span class="s2">&quot;\033[32m\c&quot;</span>
+<span class="o">}</span>
+
+<span class="c1"># set yellow text</span>
+set_yellow_text<span class="o">()</span>
+<span class="o">{</span>
+    <span class="nb">echo</span> -e <span class="s2">&quot;\033[33m\c&quot;</span>
+<span class="o">}</span>
+
+<span class="c1"># set blue text</span>
+set_blue_text<span class="o">()</span>
+<span class="o">{</span>
+    <span class="nb">echo</span> -e <span class="s2">&quot;\033[34m\c&quot;</span>
+<span class="o">}</span>
+
+<span class="c1"># set purple text</span>
+set_purple_text<span class="o">()</span>
+<span class="o">{</span>
+    <span class="nb">echo</span> -e <span class="s2">&quot;\033[35m\c&quot;</span>
+<span class="o">}</span>
+
+<span class="c1"># set sky blue text</span>
+set_sky_blue_text<span class="o">()</span>
+<span class="o">{</span>
+    <span class="nb">echo</span> -e <span class="s2">&quot;\033[36m\c&quot;</span>
+<span class="o">}</span>
+
+<span class="c1"># set white text</span>
+set_white_text<span class="o">()</span>
+<span class="o">{</span>
+    <span class="nb">echo</span> -e <span class="s2">&quot;\033[37m\c&quot;</span>
+<span class="o">}</span>
+
+<span class="c1"># set white text, high light</span>
+set_white_text_high_light<span class="o">()</span>
+<span class="o">{</span>
+    <span class="nb">echo</span> -e <span class="s2">&quot;\033[37;1m\c&quot;</span>
+<span class="o">}</span>
+
+<span class="c1"># set white text, underline</span>
+set_white_text_under_line<span class="o">()</span>
+<span class="o">{</span>
+    <span class="nb">echo</span> -e <span class="s2">&quot;\033[37;4m\c&quot;</span>
+<span class="o">}</span>
+
+<span class="c1"># set red text, blink</span>
+set_red_text_blink<span class="o">()</span>
+<span class="o">{</span>
+    <span class="nb">echo</span> -e <span class="s2">&quot;\033[31;5m\c&quot;</span>
+<span class="o">}</span>
+
+main<span class="o">()</span>
+<span class="o">{</span>
+    set_black_text_white_bg
+    <span class="nb">echo</span> -e <span class="s2">&quot;Black text, White bg\c&quot;</span>
+    set_color_default
+    <span class="nb">echo</span>
+
+    set_red_text
+    <span class="nb">echo</span> <span class="s2">&quot;Red text&quot;</span>
+
+    set_green_text
+    <span class="nb">echo</span> <span class="s2">&quot;Green text&quot;</span>
+
+    set_yellow_text
+    <span class="nb">echo</span> <span class="s2">&quot;Yellow text&quot;</span>
+
+    set_blue_text
+    <span class="nb">echo</span> <span class="s2">&quot;Blue text&quot;</span>
+
+    set_purple_text
+    <span class="nb">echo</span> -e <span class="s2">&quot;Purple text&quot;</span>
+
+    set_sky_blue_text
+    <span class="nb">echo</span> <span class="s2">&quot;Sky Blue text&quot;</span>
+
+    set_white_text
+    <span class="nb">echo</span> <span class="s2">&quot;White text&quot;</span>
+
+    set_white_text_high_light
+    <span class="nb">echo</span> <span class="s2">&quot;White text High light&quot;</span>
+
+    set_white_text_under_line
+    <span class="nb">echo</span> <span class="s2">&quot;White text Underline&quot;</span>
+
+    set_red_text_blink
+    <span class="nb">echo</span> <span class="s2">&quot;Red text Blink&quot;</span>
+
+    set_color_default
+    <span class="nb">echo</span> <span class="s2">&quot;default text&quot;</span>
+<span class="o">}</span>
+
+main
+</pre></div>
               
             </div>
           </div>
@@ -344,10 +495,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../shell_command/" class="btn btn-neutral float-right" title="shell command">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../vim/settings/" class="btn btn-neutral float-right" title="settings">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../file_edit/" class="btn btn-neutral" title="file edit"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../字符串操作/" class="btn btn-neutral" title="字符串操作"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -377,10 +528,10 @@
           <a href="https://github.com/demon90s/Help_Me_Mysql/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../file_edit/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../字符串操作/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../shell_command/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../vim/settings/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
