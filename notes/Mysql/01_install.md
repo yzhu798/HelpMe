@@ -17,3 +17,13 @@ $ systemctl status mariadb
 ```
 $ sudo systemctl start mariadb
 ```
+
+# More
+
+如果Mysql出现了故障，最简单的解决方法就是重装。
+
+卸载的命令是：
+
+```bash
+$ sudo apt autoremove mariadb-server mariadb-client
+```
