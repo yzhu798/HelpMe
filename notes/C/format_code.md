@@ -32,3 +32,17 @@ fi
 tr -d "\015" < $1 > $1.bak
 mv $1.bak $1
 ```
+
+# vscode extension
+
+Astyle
+
+安装后，打开一个源文件，右键 -> format document 即可。
+
+打开 setting ，设置格式化命令：
+
+```json
+"settings": {
+        "astyle.cmd_options": ["--style=allman", "--indent=tab", "--align-pointer=type"],
+}
+```
