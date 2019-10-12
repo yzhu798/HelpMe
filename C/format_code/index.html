@@ -84,6 +84,9 @@
     <li class="toctree-l3"><a href="#format-failed-reason">format failed reason</a></li>
     
 
+    <li class="toctree-l3"><a href="#vscode-extension">vscode extension</a></li>
+    
+
     </ul>
                 </li>
                 <li class="">
@@ -303,6 +306,16 @@ find . -name <span class="s2">&quot;*.orig&quot;</span> <span class="p">|</span>
 
 tr -d <span class="s2">&quot;\015&quot;</span> &lt; <span class="nv">$1</span> &gt; <span class="nv">$1</span>.bak
 mv <span class="nv">$1</span>.bak <span class="nv">$1</span>
+</pre></div>
+
+
+<h1 id="vscode-extension">vscode extension</h1>
+<p>Astyle</p>
+<p>安装后，打开一个源文件，右键 -&gt; format document 即可。</p>
+<p>打开 setting ，设置格式化命令：</p>
+<div class="codehilite"><pre><span></span><span class="s2">&quot;settings&quot;</span><span class="err">:</span> <span class="p">{</span>
+        <span class="nt">&quot;astyle.cmd_options&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;--style=allman&quot;</span><span class="p">,</span> <span class="s2">&quot;--indent=tab&quot;</span><span class="p">,</span> <span class="s2">&quot;--align-pointer=type&quot;</span><span class="p">],</span>
+<span class="p">}</span>
 </pre></div>
               
             </div>
