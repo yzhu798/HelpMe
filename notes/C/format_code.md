@@ -46,3 +46,11 @@ Astyle
         "astyle.cmd_options": ["--style=allman", "--indent=tab", "--align-pointer=type"],
 }
 ```
+
+# qt creator
+
+add plugin [ Beautifier ]
+
+打开 Tool -> Options -> Beautifier -> Artistic Style
+
+选择 use customized style, 自定义一个
