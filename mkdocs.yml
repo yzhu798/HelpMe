@@ -19,6 +19,8 @@ nav:
     - command-line_args: C/command-line_args.md
     - debug by gdb: C/debug_by_gdb.md
     - cmake: C/cmake.md
+  - C++:
+    - cppman: C++/cppman.md
   - shell:
     - grammer: shell/grammer.md
     - 获取命令输出: shell/获取命令输出.md
