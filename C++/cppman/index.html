@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>02 create user - Help Me Please!!!</title>
+  <title>cppman - Help Me Please!!!</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "02 create user";
-    var mkdocs_page_input_path = "Mysql/02_create_user.md";
+    var mkdocs_page_name = "cppman";
+    var mkdocs_page_input_path = "C++/cppman.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -96,9 +96,15 @@
 		
     <span class="caption-text">C++</span>
     <ul class="subnav">
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../../C++/cppman/">cppman</a>
+    <a class="current" href="./">cppman</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#cppman">cppman</a></li>
+    
+
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -171,83 +177,71 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../01_install/">01 install</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">02 create user</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#02-create-user">02 create user</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#more">More</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../../Mysql/01_install/">01 install</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../03_create_db/">03 create db</a>
+    <a class="" href="../../Mysql/02_create_user/">02 create user</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../04_drop_db/">04 drop db</a>
+    <a class="" href="../../Mysql/03_create_db/">03 create db</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../05_show_db/">05 show db</a>
+    <a class="" href="../../Mysql/04_drop_db/">04 drop db</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../06_create_table/">06 create table</a>
+    <a class="" href="../../Mysql/05_show_db/">05 show db</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../07_drop_table/">07 drop table</a>
+    <a class="" href="../../Mysql/06_create_table/">06 create table</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../08_insert_record/">08 insert record</a>
+    <a class="" href="../../Mysql/07_drop_table/">07 drop table</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../09_remove_record/">09 remove record</a>
+    <a class="" href="../../Mysql/08_insert_record/">08 insert record</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../10_update_record/">10 update record</a>
+    <a class="" href="../../Mysql/09_remove_record/">09 remove record</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../11_alter_table/">11 alter table</a>
+    <a class="" href="../../Mysql/10_update_record/">10 update record</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../12_show_column/">12 show column</a>
+    <a class="" href="../../Mysql/11_alter_table/">11 alter table</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../13_select/">13 select</a>
+    <a class="" href="../../Mysql/12_show_column/">12 show column</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../14_mysqldump/">14 mysqldump</a>
+    <a class="" href="../../Mysql/13_select/">13 select</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../15_functions/">15 functions</a>
+    <a class="" href="../../Mysql/14_mysqldump/">14 mysqldump</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../16_execute_sql_in_shell/">16 execute_sql_in_shell</a>
+    <a class="" href="../../Mysql/15_functions/">15 functions</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../17_privileges/">17 privileges</a>
+    <a class="" href="../../Mysql/16_execute_sql_in_shell/">16 execute_sql_in_shell</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Mysql/17_privileges/">17 privileges</a>
                 </li>
     </ul>
 	    </li>
@@ -274,14 +268,14 @@
     
       
         
-          <li>Mysql &raquo;</li>
+          <li>C++ &raquo;</li>
         
       
     
-    <li>02 create user</li>
+    <li>cppman</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/demon90s/Help_Me_Mysql/tree/master/notes/Mysql/02_create_user.md"
+        <a href="https://github.com/demon90s/Help_Me_Mysql/tree/master/notes/C++/cppman.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -291,61 +285,14 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="02-create-user">02 create user</h1>
-<p>刚安装完毕，需要用 root 登录，并创建一个新的账号。</p>
-<p>first login mysql client:</p>
-<div class="codehilite"><pre><span></span>$ su -
-<span class="c1"># mysql</span>
+                <h1 id="cppman">cppman</h1>
+<p>像man一样的cpp查询手册。</p>
+<div class="codehilite"><pre><span></span>$ sudo apt install cppman
+$ cppman std::list
 </pre></div>
 
 
-<p>create mysql user diwen with password 123456:</p>
-<div class="codehilite"><pre><span></span>&gt; GRANT ALL ON *.* TO diwen@&#39;%&#39; IDENTIFIED BY &#39;123456&#39;;
-&gt; FLUSH PRIVILEGES;
-</pre></div>
-
-
-<p>这条命令创建的是一个拥有所有权限的用户，可以从任何机器登录。</p>
-<p>退回普通用户，使用刚才创建的用户(diwen)登录mysql client:</p>
-<div class="codehilite"><pre><span></span>$ mysql -u diwen -p
-</pre></div>
-
-
-<h2 id="more">More</h2>
-<p>使用创建用户命令：</p>
-<div class="codehilite"><pre><span></span>&gt; CREATE USER wow;
-</pre></div>
-
-
-<p>创建了一个用户<code>wow@%</code>, 他没有什么可用的权限，只能登录，也没有密码。</p>
-<p>创建用户的同时指定密码：</p>
-<div class="codehilite"><pre><span></span>&gt; CREATE USER wow@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;
-</pre></div>
-
-
-<p>查看这个用户的权限：</p>
-<div class="codehilite"><pre><span></span>&gt; SHOW GRANTS for wow;
-</pre></div>
-
-
-<p>查看当前所有的用户：</p>
-<div class="codehilite"><pre><span></span>&gt; SELECT USER, HOST FROM mysql.user;
-</pre></div>
-
-
-<p>删掉这个用户：</p>
-<div class="codehilite"><pre><span></span>&gt; DROP USER &#39;wow&#39;@&#39;%&#39;;
-</pre></div>
-
-
-<h3 id="_1">修改用户的权限</h3>
-<div class="codehilite"><pre><span></span>$ su - 
-<span class="c1"># mysql</span>
-&gt; GRANT ALL ON foo.* TO wow@<span class="s1">&#39;localhost&#39;</span> IDENTIFIED BY <span class="s1">&#39;123456&#39;</span><span class="p">;</span>
-</pre></div>
-
-
-<p>这其实会创建一个用户，假如没有 wow@localhost 的话。</p>
+<p>第一次会有点慢。</p>
               
             </div>
           </div>
@@ -353,10 +300,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../03_create_db/" class="btn btn-neutral float-right" title="03 create db">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../shell/grammer/" class="btn btn-neutral float-right" title="grammer">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../01_install/" class="btn btn-neutral" title="01 install"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../C/cmake/" class="btn btn-neutral" title="cmake"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -386,10 +333,10 @@
           <a href="https://github.com/demon90s/Help_Me_Mysql/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../01_install/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../C/cmake/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../03_create_db/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../shell/grammer/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
