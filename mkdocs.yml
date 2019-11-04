@@ -21,6 +21,7 @@ nav:
     - cmake: C/cmake.md
   - C++:
     - cppman: C++/cppman.md
+    - cpp thread: C++/cpp_thread.md
   - shell:
     - grammer: shell/grammer.md
     - 获取命令输出: shell/获取命令输出.md
@@ -53,12 +54,6 @@ nav:
     - 15 functions: Mysql/15_functions.md
     - 16 execute_sql_in_shell: Mysql/16_execute_sql_in_shell.md
     - 17 privileges: Mysql/17_privileges.md
-
-theme:
-  #name: 'material'
-  name: readthedocs
-  logo:
-    icon: 'school'
 
 markdown_extensions:
   - codehilite
