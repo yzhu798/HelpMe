@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>format code - Help Me Please!!!</title>
+        <title>g++ - Help Me Please!!!</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -49,57 +49,57 @@
                             <li >
                                 <a href="../..">About</a>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">C <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="../HelloWorld/">HelloWorld</a>
+    <a href="../../C/HelloWorld/">HelloWorld</a>
 </li>
                                     
 <li >
-    <a href="../Makefile/">Makefile</a>
+    <a href="../../C/Makefile/">Makefile</a>
 </li>
                                     
 <li >
-    <a href="../static_library/">static library</a>
+    <a href="../../C/static_library/">static library</a>
 </li>
                                     
 <li >
-    <a href="../shared_library/">shared library</a>
-</li>
-                                    
-<li class="active">
-    <a href="./">format code</a>
+    <a href="../../C/shared_library/">shared library</a>
 </li>
                                     
 <li >
-    <a href="../command-line_args/">command-line_args</a>
+    <a href="../../C/format_code/">format code</a>
 </li>
                                     
 <li >
-    <a href="../debug_by_gdb/">debug by gdb</a>
+    <a href="../../C/command-line_args/">command-line_args</a>
 </li>
                                     
 <li >
-    <a href="../cmake/">cmake</a>
+    <a href="../../C/debug_by_gdb/">debug by gdb</a>
+</li>
+                                    
+<li >
+    <a href="../../C/cmake/">cmake</a>
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">C++ <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="../../C++/cppman/">cppman</a>
+    <a href="../cppman/">cppman</a>
 </li>
                                     
 <li >
-    <a href="../../C++/cpp_thread/">cpp thread</a>
+    <a href="../cpp_thread/">cpp thread</a>
 </li>
                                     
-<li >
-    <a href="../../C++/g++/">g++</a>
+<li class="active">
+    <a href="./">g++</a>
 </li>
                                 </ul>
                             </li>
@@ -243,17 +243,17 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../shared_library/">
+                                <a rel="next" href="../cpp_thread/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../command-line_args/">
+                                <a rel="prev" href="../../shell/grammer/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/demon90s/Help_Me_Mysql/tree/master/notes/C/format_code.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/demon90s/Help_Me_Mysql/tree/master/notes/C++/g++.md"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -263,57 +263,46 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#format-code">format code</a></li>
-        <li class="main "><a href="#format-failed-reason">format failed reason</a></li>
-        <li class="main "><a href="#vscode-extension">vscode extension</a></li>
-        <li class="main "><a href="#qt-creator">qt creator</a></li>
+        <li class="main active"><a href="#g-options">g++ options</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="format-code">format code</h1>
-<p>use astyle:</p>
-<div class="codehilite"><pre><span></span>astyle --style<span class="o">=</span>stroustrup --indent<span class="o">=</span>tab --align-pointer<span class="o">=</span><span class="nb">type</span> --recursive ./*.c,*.h
-
-find . -name <span class="s2">&quot;*.orig&quot;</span> <span class="p">|</span> xargs rm -f
-</pre></div>
-
-
-<p>How to install: </p>
-<div class="codehilite"><pre><span></span>$ sudo apt install astyle
-</pre></div>
-
-
-<h1 id="format-failed-reason">format failed reason</h1>
-<p>最好把文件弄成unix下的utf-8格式。windows下面的文件换行符会影响到格式化。</p>
-<p>使用下面的脚本把这个换行符干掉：</p>
-<div class="codehilite"><pre><span></span><span class="ch">#! /bin/bash</span>
-
-<span class="c1"># cut the last ^M of the line</span>
-<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-        <span class="nb">echo</span> <span class="s2">&quot;no input file&quot;</span>
-        <span class="nb">exit</span> <span class="m">1</span>
-<span class="k">fi</span>
-
-tr -d <span class="s2">&quot;\015&quot;</span> &lt; <span class="nv">$1</span> &gt; <span class="nv">$1</span>.bak
-mv <span class="nv">$1</span>.bak <span class="nv">$1</span>
-</pre></div>
-
-
-<h1 id="vscode-extension">vscode extension</h1>
-<p>Astyle</p>
-<p>安装后，打开一个源文件，右键 -&gt; format document 即可。</p>
-<p>打开 setting ，设置格式化命令：</p>
-<div class="codehilite"><pre><span></span><span class="s2">&quot;settings&quot;</span><span class="err">:</span> <span class="p">{</span>
-        <span class="nt">&quot;astyle.cmd_options&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;--style=allman&quot;</span><span class="p">,</span> <span class="s2">&quot;--indent=tab&quot;</span><span class="p">,</span> <span class="s2">&quot;--align-pointer=type&quot;</span><span class="p">],</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<h1 id="qt-creator">qt creator</h1>
-<p>add plugin [ Beautifier ]</p>
-<p>打开 Tool -&gt; Options -&gt; Beautifier -&gt; Artistic Style</p>
-<p>选择 use customized style, 自定义一个</p></div>
+<h1 id="g-options">g++ options</h1>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-g</td>
+<td>加入调试信息</td>
+</tr>
+<tr>
+<td>-Wall</td>
+<td>打开大部分warning</td>
+</tr>
+<tr>
+<td>-Wconversion</td>
+<td>打开类型转换相关的warning</td>
+</tr>
+<tr>
+<td>-Werror</td>
+<td>把warning视为error</td>
+</tr>
+<tr>
+<td>-Wxxx</td>
+<td>打开xxxwarning</td>
+</tr>
+<tr>
+<td>-Wno-xxx</td>
+<td>把xxxwarning关闭</td>
+</tr>
+</tbody>
+</table></div>
         </div>
 
         <footer class="col-md-12">
