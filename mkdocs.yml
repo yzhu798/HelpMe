@@ -22,7 +22,7 @@ nav:
   - C++:
     - cppman: C++/cppman.md
     - cpp thread: C++/cpp_thread.md
-    - g++: C++/g++.md
+    - gcc/g++: C++/gcc-g++.md
   - shell:
     - grammer: shell/grammer.md
     - 获取命令输出: shell/获取命令输出.md
