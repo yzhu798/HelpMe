@@ -1,0 +1,5 @@
+# 修改目录和其所有文件的所属
+chown -R user:group {目录名}
+
+# 例
+chown -R dev:dev workspace

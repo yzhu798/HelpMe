@@ -55,6 +55,11 @@ nav:
     - 15 functions: Mysql/15_functions.md
     - 16 execute_sql_in_shell: Mysql/16_execute_sql_in_shell.md
     - 17 privileges: Mysql/17_privileges.md
+  - Docker:
+    - docker安装: Docker/docker安装.md
+    - docker: Docker/docker.md
+    - docker容器数据卷: Docker/docker容器数据卷.md
+    - dockerFile: Docker/dockerFile.md
 
 markdown_extensions:
   - codehilite
