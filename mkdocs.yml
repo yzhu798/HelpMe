@@ -23,6 +23,8 @@ nav:
     - cppman: C++/cppman.md
     - cpp thread: C++/cpp_thread.md
     - gcc/g++: C++/gcc-g++.md
+    - constructor_destructor: C++/constructor_destructor.md
+    - cppcheck: C++/cppcheck.md
   - shell:
     - grammer: shell/grammer.md
     - 获取命令输出: shell/获取命令输出.md
@@ -30,6 +32,17 @@ nav:
     - 设置输出字体: shell/设置输出字体.md
     - bc: shell/bc.md
     - ln: shell/ln.md
+    - 删除掉行尾^M: shell/删除掉行尾^M.md
+  - Linux:
+    - VirtualBox挂载新的硬盘: Linux/VirtualBox挂载新的硬盘.md
+    - 修改目录或文件的权限: Linux/修改目录或文件的权限.md
+    - 内网穿透: Linux/内网穿透.md
+    - 设置 non-root 用户的最大打开文件数量: Linux/设置 non-root 用户的最大打开文件数量.md
+    - 通过scl启用c++11: Linux/通过scl启用c++11.md
+    - 杂项问题: Linux/杂项问题.md
+    - yum: Linux/yum.md
+    - 工具程序: Linux/工具程序.md
+    - 查看 CentOS 版本号: Linux/查看 CentOS 版本号.md
   - vim:
     - settings: vim/settings.md
     - file edit: vim/file_edit.md
@@ -60,6 +73,12 @@ nav:
     - docker: Docker/docker.md
     - docker容器数据卷: Docker/docker容器数据卷.md
     - dockerFile: Docker/dockerFile.md
+  - Misc:
+    - batch: Misc/batch.md
+    - mkdocs使用: Misc/mkdocs使用.md
+    - QT_for_develop: Misc/QT_for_develop.md
+    - vs code: Misc/vs code.md
+    - vs: Misc/vs.md
 
 markdown_extensions:
   - codehilite

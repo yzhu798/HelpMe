@@ -1,0 +1,50 @@
+# 单元测试 商店购买
+
+#################### case 1 begin ####################
+
+# 设置所需资源
+gm setsilverticket 1000
+
+# 设置所需等级
+gm setrolelevel 15
+
+# 开始测试
+unittest shopbuy_pet_egg |SilverTicketChange -100|
+
+# 购买
+gm shopbuy 1 1 0 0
+
+# 继续购买，应当失败，因为这个物品只能买一次
+unittest shopbuy_pet_egg_twice |SilverTicketChange 0|
+
+gm shopbuy 1 1 0 0
+
+#################### case 1 end ####################
+
+#################### case 2 begin ####################
+
+# 设置所需资源
+gm setsilverticket 1000
+
+gm setrolelevel 45
+
+# 开始测试
+unittest shopbuy_xinshou |SilverTicketChange -480| |BindItemNumChange 28025 1|
+
+# 购买
+gm shopbuy 1001 1 0 0
+
+#################### case 2 end ####################
+
+#################### case 3 begin ####################
+
+# 设置所需资源
+gm setgold 1000
+
+# 开始测试
+unittest shopbuy_exp |GoldChange -56| |BindItemNumChange 22011 2|
+
+# 购买
+gm shopbuy 15022 2 0 0
+
+#################### case 3 end ####################
