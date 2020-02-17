@@ -43,6 +43,7 @@ nav:
     - yum: Linux/yum.md
     - 工具程序: Linux/工具程序.md
     - 查看 CentOS 版本号: Linux/查看 CentOS 版本号.md
+    - ftp: Linux/ftp.md
   - vim:
     - settings: vim/settings.md
     - file edit: vim/file_edit.md
