@@ -7,3 +7,9 @@ $ sed 's/\r$//g' old_file > tmp_file
 $ rm -f tmp_file
 $ mv tmp_file old_file
 ```
+
+或者使用工具 dos2unix: 
+
+```bash
+$ dos2unix <file>
+```

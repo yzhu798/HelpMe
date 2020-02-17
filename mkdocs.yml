@@ -51,6 +51,7 @@ nav:
     - window: vim/window.md
     - file buffer: vim/file_buffer.md
   - Mysql:
+    - shell_scripts: Mysql/shell_scripts.md
     - 01 install: Mysql/01_install.md
     - 02 create user: Mysql/02_create_user.md
     - 03 create db: Mysql/03_create_db.md
