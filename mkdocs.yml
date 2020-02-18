@@ -82,5 +82,23 @@ nav:
     - vs code: Misc/vs code.md
     - vs: Misc/vs.md
 
+theme:
+  name: 'material'
+  logo:
+    icon: 'school'
+  palette:
+    primary: 'blue'
+    accent: 'blue'
+  font:
+    text: 'PT Sans'
+    code: 'PT Sans'
+  language: 'zh'
+  feature:
+    tabs: true
+
+extra:
+  search:
+    language: 'en, jp'
+
 markdown_extensions:
   - codehilite

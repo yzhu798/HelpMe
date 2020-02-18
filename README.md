@@ -1,1 +1,3 @@
-test platform: ubuntu server 18.04
+linux platform: ubuntu 18.04
+
+my ftp: ftp://diwen.org/
