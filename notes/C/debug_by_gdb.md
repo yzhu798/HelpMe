@@ -104,3 +104,11 @@ echo "/tmp/coredump/core-%e-%t" /proc/sys/kernel/core_pattern # 生成到 /tmp/c
 - %t core 文件产生时的 UNIX 时间戳
 - %p 程序的 pid
 - %s 产生的信号
+
+## Misc
+
+有时候总是提示 `Type <return> to continue, or q <return> to quit`，即使马上continue也会。解决的办法是：
+
+`set pagination off`
+
+有时候没有权限执行 gdb(ubuntu18.04)，尝试：`echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope > /dev/null`
