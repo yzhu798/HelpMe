@@ -67,3 +67,13 @@ $ su -
 ```
 
 这其实会创建一个用户，假如没有 wow@localhost 的话。
+
+### 重新设置一个密码
+
+可以和原密码一样。
+
+登入后执行：
+
+```
+mysql> set password = password('newpassword')
+```
