@@ -39,6 +39,7 @@ nav:
     - 修改目录或文件的权限: Linux/修改目录或文件的权限.md
     - 内网穿透: Linux/内网穿透.md
     - 设置 non-root 用户的最大打开文件数量: Linux/设置 non-root 用户的最大打开文件数量.md
+    - 升级gcc: Linux/升级gcc.md
     - 通过scl启用c++11: Linux/通过scl启用c++11.md
     - 杂项问题: Linux/杂项问题.md
     - yum: Linux/yum.md
@@ -82,6 +83,7 @@ nav:
     - QT_for_develop: Misc/QT_for_develop.md
     - vs code: Misc/vs code.md
     - vs: Misc/vs.md
+    - markdown: Misc/markdown.md
 
 theme:
   name: 'material'
