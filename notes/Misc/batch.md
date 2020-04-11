@@ -78,6 +78,9 @@ ping -n 3 127.0 > nul
 
 rem 等待3秒，把输出丢弃
 timeout /t 3 > nul
+
+rem 设置UTF-8编码
+chcp 65001
 ```
 
 ## 比较数字
