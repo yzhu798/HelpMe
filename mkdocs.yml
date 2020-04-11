@@ -34,6 +34,8 @@ nav:
     - ln: shell/ln.md
     - 删除掉行尾^M: shell/删除掉行尾^M.md
   - Linux:
+    - 使用ssh公钥登陆Linux: Linux/使用ssh公钥登陆Linux.md
+    - VirtualBox安装CentOS7及其相关配置: Linux/VirtualBox安装CentOS7及其相关配置.md
     - VirtualBox挂载新的硬盘: Linux/VirtualBox挂载新的硬盘.md
     - 修改目录或文件的权限: Linux/修改目录或文件的权限.md
     - 内网穿透: Linux/内网穿透.md
@@ -45,6 +47,7 @@ nav:
     - 工具程序: Linux/工具程序.md
     - 查看 CentOS 版本号: Linux/查看 CentOS 版本号.md
     - ftp: Linux/ftp.md
+    - 搭建svn服务器: Linux/搭建svn服务器.md
   - vim:
     - settings: vim/settings.md
     - file edit: vim/file_edit.md
