@@ -25,6 +25,7 @@ nav:
     - gcc/g++: C++/gcc-g++.md
     - constructor_destructor: C++/constructor_destructor.md
     - cppcheck: C++/cppcheck.md
+    - valgrind: C++/valgrind.md
   - shell:
     - grammer: shell/grammer.md
     - 获取命令输出: shell/获取命令输出.md
