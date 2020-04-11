@@ -10,22 +10,19 @@ edit_uri: "tree/master/notes"
 
 nav:
   - About: index.md
-  - C:
-    - HelloWorld: C/HelloWorld.md
-    - Makefile: C/Makefile.md
-    - static library: C/static_library.md
-    - shared library: C/shared_library.md
-    - format code: C/format_code.md
-    - command-line_args: C/command-line_args.md
-    - debug by gdb: C/debug_by_gdb.md
-    - cmake: C/cmake.md
-  - C++:
-    - cppman: C++/cppman.md
-    - cpp thread: C++/cpp_thread.md
-    - gcc/g++: C++/gcc-g++.md
-    - constructor_destructor: C++/constructor_destructor.md
-    - cppcheck: C++/cppcheck.md
-    - valgrind: C++/valgrind.md
+  - C/C++:
+    - cppman: C_C++/cppman.md
+    - cpp thread: C_C++/cpp_thread.md
+    - gcc/g++: C_C++/gcc-g++.md
+    - constructor_destructor: C_C++/constructor_destructor.md
+    - cppcheck: C_C++/cppcheck.md
+    - valgrind: C_C++/valgrind.md
+    - Makefile: C_C++/Makefile.md
+    - static library: C_C++/static_library.md
+    - shared library: C_C++/shared_library.md
+    - format code: C_C++/format_code.md
+    - debug by gdb: C_C++/debug_by_gdb.md
+    - cmake: C_C++/cmake.md
   - shell:
     - grammer: shell/grammer.md
     - 获取命令输出: shell/获取命令输出.md
