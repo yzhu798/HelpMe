@@ -35,3 +35,7 @@ T表示符号位于代码区。
 $ gcc -o main.o -c main.c
 $ gcc -o main main.o libhelloworld.a
 ```
+
+## More
+
+对于C++程序而言，符号表的内容可能会比较晦涩。这时候使用 `nm -C` 选项可以输出更具有可读性的内容。
