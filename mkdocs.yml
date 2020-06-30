@@ -84,6 +84,7 @@ nav:
     - vs code: Misc/vs code.md
     - vs: Misc/vs.md
     - markdown: Misc/markdown.md
+    - mklink无权限执行: Misc/mklink无权限执行.md
 
 theme:
   name: 'material'
